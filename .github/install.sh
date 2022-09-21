@@ -17,7 +17,7 @@ cpnn(){
 while true; do
 [ -e "$Likk/tmp/res/values-vi/strings.xml" ] && break || sleep 1
 kakksks2=$(($kakksks2 + 1))
-[ "$kakksks2" == 500 ] && break || sleep 2
+[ "$kakksks2" == 300 ] && break || sleep 2
 done
 sleep 2
 for vakdll in $Likk/Lang/*; do
@@ -32,7 +32,7 @@ unzip -qo $Likk/lib/YouTube.apks 'base.apk' -d $Likk/Tav
 while true; do
 [ -e "$Likk/done.txt" ] && break || sleep 1
 kakksks2=$(($kakksks2 + 1))
-[ "$kakksks2" == 500 ] && break || sleep 2
+[ "$kakksks2" == 300 ] && break || sleep 2
 done
 sleep 2
 }
@@ -57,7 +57,8 @@ Vsionnnnn="$(Xem https://github.com/revanced/revanced-cli/releases | grep -m1 '/
 Taive "https://github.com/revanced/revanced-cli/releases/download/v${Vsionnnnn##*/}/revanced-cli-${Vsionnnnn##*/}-all.jar" "$Likk/lib/revanced-cli.jar"       
 Vsiogddh="$(Xem https://github.com/revanced/revanced-patches/releases | grep -m1 '/revanced-patches/tree' | sed 's|v||g' | cut -d \" -f2)"
 Taive "https://github.com/revanced/revanced-patches/releases/download/v${Vsiogddh##*/}/revanced-patches-${Vsiogddh##*/}.jar" "$Likk/lib/revanced-patches.jar"       
-Taive "https://github.com$(Xem "https://github.com/revanced/revanced-integrations/releases" | grep -m1 '/releases/download' | cut -d \" -f2)" "$Likk/lib/revanced-integrations.apk"
+Vdbbd="$(Xem https://github.com/revanced/revanced-integrations/releases | grep -m1 '/revanced-integrations/tree' | sed 's|v||g' | cut -d \" -f2)"
+Taive "https://github.com/revanced/revanced-integrations/releases/download/v${Vdbbd##*/}/app-release-unsigned.apk" "$Likk/lib/revanced-integrations.apk"
 
 ls $Likk/lib
 
