@@ -1,4 +1,5 @@
-# Revanced-tool [![Revanced](https://github.com/Kingsmanvn-Official/Revanced-tool/actions/workflows/build.yml/badge.svg)](https://github.com/Kingsmanvn-Official/Revanced-tool/actions/workflows/build.yml)
+# Revanced-tool
+[![Revanced](https://github.com/Kingsmanvn-Official/Revanced-tool/actions/workflows/build.yml/badge.svg)](https://github.com/Kingsmanvn-Official/Revanced-tool/actions/workflows/build.yml)
 
 - YouTube mod tool automatically
 
