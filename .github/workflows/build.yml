@@ -54,6 +54,10 @@ jobs:
         with:
           java-version: '17'
           distribution: 'adopt'
+      - name: get sqlite3
+        run: bash ./get_sqlite3.sh
+      - name: get MicroG
+        run: bash ./get_microg.sh
       - name: Run code
         env:
           VERSION: ${{ inputs.VERSION }}
@@ -89,6 +93,10 @@ jobs:
         with:
           java-version: '17'
           distribution: 'adopt'
+      - name: get sqlite3
+        run: bash ./get_sqlite3.sh
+      - name: get MicroG
+        run: bash ./get_microg.sh
       - name: Run code
         env:
           VERSION: ${{ inputs.VERSION }}
@@ -132,6 +140,10 @@ jobs:
         with:
           java-version: '17'
           distribution: 'adopt'
+      - name: get sqlite3
+        run: bash ./get_sqlite3.sh
+      - name: get MicroG
+        run: bash ./get_microg.sh
       - name: Run code
         env:
           VERSION: ${{ inputs.VERSION }}
@@ -167,6 +179,10 @@ jobs:
         with:
           java-version: '17'
           distribution: 'adopt'
+      - name: get sqlite3
+        run: bash ./get_sqlite3.sh
+      - name: get MicroG
+        run: bash ./get_microg.sh
       - name: Run code
         env:
           VERSION: ${{ inputs.VERSION }}
