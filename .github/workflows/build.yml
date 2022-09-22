@@ -111,7 +111,7 @@ jobs:
         with:
           token: ${{ github.token }}
           name: Revanced
-          tag_name: Revanced-V${{ env.VS }}-${{ get_next_version_code.steps.next_ver_code.outputs.NEXT_VER_CODE }}
+          tag_name: Revanced-V${{ env.VS }}-${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
           files: Up/*
           
       - name: Switch to update branch
@@ -128,7 +128,7 @@ jobs:
           branch: update
           skip_checkout: true
           file_pattern: latest_build.md
-          commit_message: Bump version ${{ get_next_version_code.steps.next_ver_code.outputs.NEXT_VER_CODE }}
+          commit_message: Bump version ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
 
   build2:
     name: 'ROOT...'
@@ -188,7 +188,7 @@ jobs:
         with:
           token: ${{ github.token }}
           name: Revanced
-          tag_name: Revanced-V${{ env.VS }}-${{ get_next_version_code.steps.next_ver_code.outputs.NEXT_VER_CODE }}
+          tag_name: Revanced-V${{ env.VS }}-${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
           files: Up/*
           
       - name: Switch to update branch
@@ -205,7 +205,7 @@ jobs:
           branch: update
           skip_checkout: true
           file_pattern: latest_build.md
-          commit_message: Bump version ${{ get_next_version_code.steps.next_ver_code.outputs.NEXT_VER_CODE }}
+          commit_message: Bump version ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
 
   build3:
     name: 'AMOLED NO ROOT...'
@@ -257,7 +257,7 @@ jobs:
         with:
           token: ${{ github.token }}
           name: Revanced
-          tag_name: Revanced-V${{ env.VS }}-${{ get_next_version_code.steps.next_ver_code.outputs.NEXT_VER_CODE }}
+          tag_name: Revanced-V${{ env.VS }}-${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
           files: Up/*
           
       - name: Switch to update branch
@@ -274,7 +274,7 @@ jobs:
           branch: update
           skip_checkout: true
           file_pattern: latest_build.md
-          commit_message: Bump version ${{ get_next_version_code.steps.next_ver_code.outputs.NEXT_VER_CODE }}
+          commit_message: Bump version ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
 
   build4:
     name: 'AMOLED ROOT...'
@@ -334,7 +334,7 @@ jobs:
         with:
           token: ${{ github.token }}
           name: Revanced
-          tag_name: Revanced-V${{ env.VS }}-${{ get_next_version_code.steps.next_ver_code.outputs.NEXT_VER_CODE }}
+          tag_name: Revanced-V${{ env.VS }}-${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
           files: Up/*
           
       - name: Switch to update branch
@@ -351,7 +351,7 @@ jobs:
           branch: update
           skip_checkout: true
           file_pattern: latest_build.md
-          commit_message: Bump version ${{ get_next_version_code.steps.next_ver_code.outputs.NEXT_VER_CODE }}
+          commit_message: Bump version ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
           
   Notify:
     needs:
