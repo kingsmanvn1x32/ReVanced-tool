@@ -19,18 +19,14 @@ jobs:
         id: should_build
         shell: bash
         run: |
-          source build.conf
-          source utils.sh
+          source get_buildlog.sh
           is_youtube_latest() {
-            if [[ $YT_PATCHER_ARGS == *"--experimental"* ]]; then
-              declare -r cur_yt=$(sed -n 's/.*YouTube version: \(.*\)/\1/p' latest_build.md | xargs)
-              [ -z "$cur_yt" ] && return 1 # empty, fail=>dont build
-              declare -r last_ver=$(get_apk_vers "https://www.apkmirror.com/uploads/?appcategory=youtube" | get_largest_ver)
-              echo "current yt version: $cur_yt"
-              echo "latest yt version: $last_ver"
-              [ "$cur_yt" != "$last_ver" ] # test success=>build, fail=>dont build
-            else
-              return 1 # not experimental, dont build
+            declare -r cur_yt=$(sed -n 's/.*YouTube version: \(.*\)/\1/p' latest_build.md | xargs)
+            [ -z "$cur_yt" ] && return 1 # empty, fail=>dont build
+            declare -r last_ver=$(get_apk_vers "https://www.apkmirror.com/uploads/?appcategory=youtube" | get_largest_ver)
+            echo "current yt version: $cur_yt"
+            echo "latest yt version: $last_ver"
+            [ "$cur_yt" != "$last_ver" ] # test success=>build, fail=>dont build
             fi
           }
           is_patches_latest() {
