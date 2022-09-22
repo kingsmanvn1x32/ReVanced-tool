@@ -97,7 +97,7 @@ jobs:
       - id: get_output
         run: |
           bash ./buildlog.sh
-          echo -e "\nYouTube version: $VERSION" >>build.log
+          echo -e "\nYouTube version: ${{ env.VS }}" >>build.log
           echo -e "\n[Revanced-tool repo]($GITHUB_SERVER_URL/Kingsmanvn-Official/Revanced-tool)" >>build.log
           BUILD_LOG=$(cat build.log)
           BUILD_LOG="${BUILD_LOG//'%'/'%25'}"
@@ -165,7 +165,7 @@ jobs:
       - id: get_output
         run: |
           bash ./buildlog.sh
-          echo -e "\nYouTube version: $VERSION" >>build.log
+          echo -e "\nYouTube version: ${{ env.VS }}" >>build.log
           echo -e "\n[Revanced-tool repo]($GITHUB_SERVER_URL/Kingsmanvn-Official/Revanced-tool)" >>build.log
           BUILD_LOG=$(cat build.log)
           BUILD_LOG="${BUILD_LOG//'%'/'%25'}"
@@ -241,7 +241,7 @@ jobs:
       - id: get_output
         run: |
           bash ./buildlog.sh
-          echo -e "\nYouTube version: $VERSION" >>build.log
+          echo -e "\nYouTube version: ${{ env.VS }}" >>build.log
           echo -e "\n[Revanced-tool repo]($GITHUB_SERVER_URL/Kingsmanvn-Official/Revanced-tool)" >>build.log
           BUILD_LOG=$(cat build.log)
           BUILD_LOG="${BUILD_LOG//'%'/'%25'}"
@@ -309,7 +309,7 @@ jobs:
       - id: get_output
         run: |
           bash ./buildlog.sh
-          echo -e "\nYouTube version: $VERSION" >>build.log
+          echo -e "\nYouTube version: ${{ env.VS }}" >>build.log
           echo -e "\n[Revanced-tool repo]($GITHUB_SERVER_URL/Kingsmanvn-Official/Revanced-tool)" >>build.log
           BUILD_LOG=$(cat build.log)
           BUILD_LOG="${BUILD_LOG//'%'/'%25'}"
