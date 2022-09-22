@@ -96,7 +96,6 @@ jobs:
       
       - id: get_output
         run: |
-          source ./github/install.sh
           bash ./buildlog.sh
           echo -e "\nYouTube version: $VERSION" >>build.log
           echo -e "\n[Revanced-tool repo]($GITHUB_SERVER_URL/Kingsmanvn-Official/Revanced-tool)" >>build.log
@@ -165,7 +164,6 @@ jobs:
       
       - id: get_output
         run: |
-          source ./github/install.sh
           bash ./buildlog.sh
           echo -e "\nYouTube version: $VERSION" >>build.log
           echo -e "\n[Revanced-tool repo]($GITHUB_SERVER_URL/Kingsmanvn-Official/Revanced-tool)" >>build.log
@@ -242,7 +240,6 @@ jobs:
       
       - id: get_output
         run: |
-          source ./github/install.sh
           bash ./buildlog.sh
           echo -e "\nYouTube version: $VERSION" >>build.log
           echo -e "\n[Revanced-tool repo]($GITHUB_SERVER_URL/Kingsmanvn-Official/Revanced-tool)" >>build.log
@@ -311,7 +308,6 @@ jobs:
       
       - id: get_output
         run: |
-          source ./github/install.sh
           bash ./buildlog.sh
           echo -e "\nYouTube version: $VERSION" >>build.log
           echo -e "\n[Revanced-tool repo]($GITHUB_SERVER_URL/Kingsmanvn-Official/Revanced-tool)" >>build.log
