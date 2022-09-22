@@ -4,6 +4,7 @@ source semver
 
 TEMP_DIR="temp"
 BUILD_DIR="build"
+WGET_HEADER="User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0"
 
 get_prebuilts() {
 	echo "Getting prebuilts"
@@ -26,5 +27,6 @@ get_prebuilts() {
 
 abort() { echo "abort: $1" && exit 1; }
 
+req() { wget -nv -O "$2" --header="$WGET_HEADER" "$1"; }
 log() { echo -e "$1  " >>build.log; }
 get_apk_vers() { req "https://www.apkmirror.com/uploads/?appcategory=${1}" - | sed -n 's;.*Version:</span><span class="infoSlide-value">\(.*\) </span>.*;\1;p'; }
