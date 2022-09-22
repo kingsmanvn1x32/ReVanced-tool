@@ -1,5 +1,6 @@
 name: Revanced build
 on:
+  workflow_call:
   schedule:
     - cron: '30 23 * * *'
   workflow_dispatch:
