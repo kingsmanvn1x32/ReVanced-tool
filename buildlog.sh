@@ -3,6 +3,7 @@
 set -eu -o pipefail
 
 source get_buildlog.sh
+source ./github/install.sh
 
 >build.log
 log "$(date +'%Y-%m-%d')\n"
