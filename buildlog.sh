@@ -2,7 +2,6 @@
 
 set -eu -o pipefail
 
-source build.conf
 source get_buildlog.sh
 
 >build.log
