@@ -1,6 +1,11 @@
 name: Revanced build
 on:
   workflow_call:
+    secrets:
+      TELEGRAM_TO:
+        required: true
+      TELEGRAM_TOKEN:
+        required: true
   schedule:
     - cron: '30 23 * * *'
   workflow_dispatch:
