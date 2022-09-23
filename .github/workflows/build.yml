@@ -52,6 +52,8 @@ on:
 jobs:
   get_next_version_code:
     runs-on: ubuntu-22.04
+    outputs:
+      NEXT_VER: ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
     steps:
       - uses: actions/setup-java@v3
         with:
@@ -66,9 +68,6 @@ jobs:
           TAG=$(wget https://api.github.com/repos/Kingsmanvn-Official/releases/latest -O- | tr -d ' ' | sed -n 's/.*"tag_name":"\(.*\)".*/\1/p')
           if [ -z "$TAG" ]; then TAG=0; fi
           echo ::set-output name=NEXT_VER_CODE::$((TAG + 1))
-
-      - name: Set env
-        run: echo "NEXT_VER=${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}" >> $GITHUB_ENV
 
   build1:
     name: 'NO ROOT...'
@@ -115,13 +114,16 @@ jobs:
           BUILD_LOG="${BUILD_LOG//$'\r'/'%0D'}"
           echo ::set-output name=BUILD_LOG::$BUILD_LOG
 
-      - name: Upload File
-        uses: softprops/action-gh-release@v1
+      - name: Upload modules to release
+        uses: svenstaro/upload-release-action@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          name: Revanced-V${{ env.VS }}-${{ env.NEXT_VER }}
-          tag_name: ${{ env.NEXT_VER }}
-          files: Up/*
+          body: ${{ steps.get_output.outputs.BUILD_LOG }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: Up/*
+          release_name: Revanced-V${{ env.VS }}-${{ needs.get_next_version_code.outputs.NEXT_VER }}
+          tag: ${{ needs.get_next_version_code.outputs.NEXT_VER }}
+          file_glob: true
+          overwrite: false
 
       - name: Switch to update branch
         run: git checkout -f update || git switch --discard-changes --orphan update
@@ -192,13 +194,17 @@ jobs:
           tag_name: Up
           files: Up*.json
           prerelease: true
-      - name: Upload File
-        uses: softprops/action-gh-release@v1
+
+      - name: Upload modules to release
+        uses: svenstaro/upload-release-action@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          name: Revanced-V${{ env.VS }}-${{ env.NEXT_VER }}
-          tag_name: ${{ env.NEXT_VER }}
-          files: Up/*
+          body: ${{ steps.get_output.outputs.BUILD_LOG }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: Up/*
+          release_name: Revanced-V${{ env.VS }}-${{ needs.get_next_version_code.outputs.NEXT_VER }}
+          tag: ${{ needs.get_next_version_code.outputs.NEXT_VER }}
+          file_glob: true
+          overwrite: false
           
       - name: Switch to update branch
         run: git checkout -f update || git switch --discard-changes --orphan update
@@ -261,13 +267,16 @@ jobs:
           BUILD_LOG="${BUILD_LOG//$'\r'/'%0D'}"
           echo ::set-output name=BUILD_LOG::$BUILD_LOG
           
-      - name: Upload File
-        uses: softprops/action-gh-release@v1
+      - name: Upload modules to release
+        uses: svenstaro/upload-release-action@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          name: Revanced-V${{ env.VS }}-${{ env.NEXT_VER }}
-          tag_name: ${{ env.NEXT_VER }}
-          files: Up/*
+          body: ${{ steps.get_output.outputs.BUILD_LOG }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: Up/*
+          release_name: Revanced-V${{ env.VS }}-${{ needs.get_next_version_code.outputs.NEXT_VER }}
+          tag: ${{ needs.get_next_version_code.outputs.NEXT_VER }}
+          file_glob: true
+          overwrite: false
           
       - name: Switch to update branch
         run: git checkout -f update || git switch --discard-changes --orphan update
@@ -338,13 +347,17 @@ jobs:
           tag_name: Up
           files: Up*.json
           prerelease: true
-      - name: Upload File
-        uses: softprops/action-gh-release@v1
+
+      - name: Upload modules to release
+        uses: svenstaro/upload-release-action@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          name: Revanced-V${{ env.VS }}-${{ env.NEXT_VER }}
-          tag_name: ${{ env.NEXT_VER }}
-          files: Up/*
+          body: ${{ steps.get_output.outputs.BUILD_LOG }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: Up/*
+          release_name: Revanced-V${{ env.VS }}-${{ needs.get_next_version_code.outputs.NEXT_VER }}
+          tag: ${{ needs.get_next_version_code.outputs.NEXT_VER }}
+          file_glob: true
+          overwrite: false
           
       - name: Switch to update branch
         run: git checkout -f update || git switch --discard-changes --orphan update
