@@ -68,7 +68,7 @@ jobs:
           echo ::set-output name=NEXT_VER_CODE::$((TAG + 1))
 
       - name: Set env
-        run: "NEXT_VER_CODE=${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}" >> $GITHUB_ENV
+        run: echo "NEXT_VER_CODE=${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}" >> $GITHUB_ENV
 
   build1:
     name: 'NO ROOT...'
