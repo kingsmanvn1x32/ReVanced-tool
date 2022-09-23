@@ -81,11 +81,11 @@ jobs:
         with:
           java-version: '17'
           distribution: 'adopt'
-      - name: get sqlite3
+      - name: Get sqlite3
         run: bash ./get_sqlite3.sh
-      - name: get MicroG
+      - name: Get MicroG
         run: bash ./get_microg.sh
-      - name: Run code
+      - name: Build
         env:
           VERSION: ${{ inputs.VERSION }}
           DEVICE: ${{ inputs.DEVICE }}
@@ -103,7 +103,11 @@ jobs:
           fi
           . .github/install.sh
       
-      - id: get_output
+      - name: Get output
+        id: get_output
+        env:
+          GITHUB_REPOSITORY: $GITHUB_REPOSITORY
+          NEXT_VER_CODE: ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
         run: |
           bash ./buildlog.sh
           echo -e "\nYouTube version: ${{ env.VS }}" >>build.log
@@ -152,11 +156,11 @@ jobs:
         with:
           java-version: '17'
           distribution: 'adopt'
-      - name: get sqlite3
+      - name: Get sqlite3
         run: bash ./get_sqlite3.sh
-      - name: get MicroG
+      - name: Get MicroG
         run: bash ./get_microg.sh
-      - name: Run code
+      - name: Build
         env:
           VERSION: ${{ inputs.VERSION }}
           DEVICE: ${{ inputs.DEVICE }}
@@ -174,7 +178,11 @@ jobs:
           fi
           . .github/install.sh
       
-      - id: get_output
+      - name: Get output
+        id: get_output
+        env:
+          GITHUB_REPOSITORY: $GITHUB_REPOSITORY
+          NEXT_VER_CODE: ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
         run: |
           bash ./buildlog.sh
           echo -e "\nYouTube version: ${{ env.VS }}" >>build.log
@@ -231,11 +239,11 @@ jobs:
         with:
           java-version: '17'
           distribution: 'adopt'
-      - name: get sqlite3
+      - name: Get sqlite3
         run: bash ./get_sqlite3.sh
-      - name: get MicroG
+      - name: Get MicroG
         run: bash ./get_microg.sh
-      - name: Run code
+      - name: Build
         env:
           VERSION: ${{ inputs.VERSION }}
           DEVICE: ${{ inputs.DEVICE }}
@@ -253,7 +261,11 @@ jobs:
           fi
           . .github/install.sh
       
-      - id: get_output
+      - name: Get output
+        id: get_output
+        env:
+          GITHUB_REPOSITORY: $GITHUB_REPOSITORY
+          NEXT_VER_CODE: ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
         run: |
           bash ./buildlog.sh
           echo -e "\nYouTube version: ${{ env.VS }}" >>build.log
@@ -302,11 +314,11 @@ jobs:
         with:
           java-version: '17'
           distribution: 'adopt'
-      - name: get sqlite3
+      - name: Get sqlite3
         run: bash ./get_sqlite3.sh
-      - name: get MicroG
+      - name: Get MicroG
         run: bash ./get_microg.sh
-      - name: Run code
+      - name: Build
         env:
           VERSION: ${{ inputs.VERSION }}
           DEVICE: ${{ inputs.DEVICE }}
@@ -324,7 +336,11 @@ jobs:
           fi
           . .github/install.sh
       
-      - id: get_output
+      - name: Get output
+        id: get_output
+        env:
+          GITHUB_REPOSITORY: $GITHUB_REPOSITORY
+          NEXT_VER_CODE: ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
         run: |
           bash ./buildlog.sh
           echo -e "\nYouTube version: ${{ env.VS }}" >>build.log
