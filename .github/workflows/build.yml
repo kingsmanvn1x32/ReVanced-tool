@@ -122,6 +122,7 @@ jobs:
           file: ./Up/*
           release_name: Revanced-V${{ env.VS }}-${{ needs.get_next_version_code.outputs.NEXT_VER }}
           tag: ${{ needs.get_next_version_code.outputs.NEXT_VER }}
+          file_glob: true
           overwrite: false
 
       - name: Switch to update branch
@@ -202,6 +203,7 @@ jobs:
           file: ./Up/*
           release_name: Revanced-V${{ env.VS }}-${{ needs.get_next_version_code.outputs.NEXT_VER }}
           tag: ${{ needs.get_next_version_code.outputs.NEXT_VER }}
+          file_glob: true
           overwrite: false
           
       - name: Switch to update branch
@@ -273,6 +275,7 @@ jobs:
           file: ./Up/*
           release_name: Revanced-V${{ env.VS }}-${{ needs.get_next_version_code.outputs.NEXT_VER }}
           tag: ${{ needs.get_next_version_code.outputs.NEXT_VER }}
+          file_glob: true
           overwrite: false
           
       - name: Switch to update branch
@@ -353,6 +356,7 @@ jobs:
           file: ./Up/*
           release_name: Revanced-V${{ env.VS }}-${{ needs.get_next_version_code.outputs.NEXT_VER }}
           tag: ${{ needs.get_next_version_code.outputs.NEXT_VER }}
+          file_glob: true
           overwrite: false
           
       - name: Switch to update branch
