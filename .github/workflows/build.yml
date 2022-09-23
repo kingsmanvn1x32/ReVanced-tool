@@ -65,7 +65,7 @@ jobs:
         run: |
           # TAG=$(git tag --sort=creatordate | tail -1)
           # fetch it from github
-          TAG=$(wget https://api.github.com/repos/Kingsmanvn-Official/Revanced-tool/releases/latest -O- | tr -d ' ' | sed -n 's/.*"tag_name":"\(.*\)".*/\1/p')
+          TAG=$(wget https://api.github.com/repos/${{ github.repository }}/releases/latest -O- | tr -d ' ' | sed -n 's/.*"tag_name":"\(.*\)".*/\1/p')
           if [ -z "$TAG" ]; then TAG=0; fi
           echo ::set-output name=NEXT_VER_CODE::$((TAG + 1))
 
@@ -107,7 +107,7 @@ jobs:
         run: |
           bash ./buildlog.sh
           echo -e "\nYouTube version: ${{ env.VS }}" >>build.log
-          echo -e "\n[Revanced-tool repo]($GITHUB_SERVER_URL/Kingsmanvn-Official/Revanced-tool)" >>build.log
+          echo -e "\n[Revanced-tool repo]($GITHUB_SERVER_URL/${{ github.repository }})" >>build.log
           BUILD_LOG=$(cat build.log)
           BUILD_LOG="${BUILD_LOG//'%'/'%25'}"
           BUILD_LOG="${BUILD_LOG//$'\n'/'%0A'}"
@@ -173,7 +173,7 @@ jobs:
         run: |
           bash ./buildlog.sh
           echo -e "\nYouTube version: ${{ env.VS }}" >>build.log
-          echo -e "\n[Revanced-tool repo]($GITHUB_SERVER_URL/Kingsmanvn-Official/Revanced-tool)" >>build.log
+          echo -e "\n[Revanced-tool repo]($GITHUB_SERVER_URL/${{ github.repository }})" >>build.log
           BUILD_LOG=$(cat build.log)
           BUILD_LOG="${BUILD_LOG//'%'/'%25'}"
           BUILD_LOG="${BUILD_LOG//$'\n'/'%0A'}"
@@ -232,7 +232,7 @@ jobs:
         run: |
           bash ./buildlog.sh
           echo -e "\nYouTube version: ${{ env.VS }}" >>build.log
-          echo -e "\n[Revanced-tool repo]($GITHUB_SERVER_URL/Kingsmanvn-Official/Revanced-tool)" >>build.log
+          echo -e "\n[Revanced-tool repo]($GITHUB_SERVER_URL/${{ github.repository }})" >>build.log
           BUILD_LOG=$(cat build.log)
           BUILD_LOG="${BUILD_LOG//'%'/'%25'}"
           BUILD_LOG="${BUILD_LOG//$'\n'/'%0A'}"
@@ -257,7 +257,7 @@ jobs:
         id: update_config
         run: |
           cp -f build.log latest_build.md
-          CHANGELOG_URL="https://raw.githubusercontent.com/Kingsmanvn-Official/Revanced-tool/update/latest_build.md"
+          CHANGELOG_URL="https://raw.githubusercontent.com/${{ github.repository }}/update/latest_build.md"
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
@@ -315,7 +315,7 @@ jobs:
         run: |
           bash ./buildlog.sh
           echo -e "\nYouTube version: ${{ env.VS }}" >>build.log
-          echo -e "\n[Revanced-tool repo]($GITHUB_SERVER_URL/Kingsmanvn-Official/Revanced-tool)" >>build.log
+          echo -e "\n[Revanced-tool repo]($GITHUB_SERVER_URL/${{ github.repository }})" >>build.log
           BUILD_LOG=$(cat build.log)
           BUILD_LOG="${BUILD_LOG//'%'/'%25'}"
           BUILD_LOG="${BUILD_LOG//$'\n'/'%0A'}"
