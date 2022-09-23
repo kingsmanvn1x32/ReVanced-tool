@@ -118,7 +118,7 @@ jobs:
       - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
-          token: ${{ github.token }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           name: Revanced-V${{ env.VS }}-${{ env.NEXT_VER }}
           tag_name: ${{ env.NEXT_VER }}
           files: Up/*
@@ -187,7 +187,7 @@ jobs:
       - name: Upload json
         uses: softprops/action-gh-release@v1
         with:
-          token: ${{ github.token }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           name: Update
           tag_name: Up
           files: Up*.json
@@ -195,7 +195,7 @@ jobs:
       - name: name: Upload File
         uses: softprops/action-gh-release@v1
         with:
-          token: ${{ github.token }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           name: Revanced-V${{ env.VS }}-${{ env.NEXT_VER }}
           tag_name: ${{ env.NEXT_VER }}
           files: Up/*
@@ -264,7 +264,7 @@ jobs:
       - name: name: Upload File
         uses: softprops/action-gh-release@v1
         with:
-          token: ${{ github.token }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           name: Revanced-V${{ env.VS }}-${{ env.NEXT_VER }}
           tag_name: ${{ env.NEXT_VER }}
           files: Up/*
@@ -333,7 +333,7 @@ jobs:
       - name: Upload json
         uses: softprops/action-gh-release@v1
         with:
-          token: ${{ github.token }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           name: Update
           tag_name: Up
           files: Up*.json
@@ -341,7 +341,7 @@ jobs:
       - name: name: Upload File
         uses: softprops/action-gh-release@v1
         with:
-          token: ${{ github.token }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           name: Revanced-V${{ env.VS }}-${{ env.NEXT_VER }}
           tag_name: ${{ env.NEXT_VER }}
           files: Up/*
