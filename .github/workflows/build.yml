@@ -102,18 +102,6 @@ jobs:
           fi
           . .github/install.sh
 
-      - name: Get output
-        id: get_output
-        run: |
-          bash ./buildlog.sh
-          echo -e "\nYouTube version: ${{ env.VS }}" >>build.log
-          echo -e "\n[Revanced-tool repo]($GITHUB_SERVER_URL/Kingsmanvn-Official/Revanced-tool)" >>build.log
-          BUILD_LOG=$(cat build.log)
-          BUILD_LOG="${BUILD_LOG//'%'/'%25'}"
-          BUILD_LOG="${BUILD_LOG//$'\n'/'%0A'}"
-          BUILD_LOG="${BUILD_LOG//$'\r'/'%0D'}"
-          echo ::set-output name=BUILD_LOG::$BUILD_LOG
-
       - name: Upload modules to release
         uses: svenstaro/upload-release-action@v2
         with:
@@ -124,22 +112,6 @@ jobs:
           tag: ${{ needs.get_next_version_code.outputs.NEXT_VER }}
           file_glob: true
           overwrite: true
-
-      - name: Switch to update branch
-        run: git checkout -f update || git switch --discard-changes --orphan update
-
-      - name: Update changelog
-        id: update_config
-        run: |
-          cp -f build.log latest_build.md
-          CHANGELOG_URL="https://raw.githubusercontent.com/Kingsmanvn-Official/Revanced-tool/update/latest_build.md"
-          
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          branch: update
-          skip_checkout: true
-          file_pattern: latest_build.md
-          commit_message: Bump version ${{ needs.get_next_version_code.outputs.NEXT_VER }}
 
   build2:
     name: 'ROOT...'
@@ -174,18 +146,6 @@ jobs:
           fi
           . .github/install.sh
 
-      - name: Get output
-        id: get_output
-        run: |
-          bash ./buildlog.sh
-          echo -e "\nYouTube version: ${{ env.VS }}" >>build.log
-          echo -e "\n[Revanced-tool repo]($GITHUB_SERVER_URL/Kingsmanvn-Official/Revanced-tool)" >>build.log
-          BUILD_LOG=$(cat build.log)
-          BUILD_LOG="${BUILD_LOG//'%'/'%25'}"
-          BUILD_LOG="${BUILD_LOG//$'\n'/'%0A'}"
-          BUILD_LOG="${BUILD_LOG//$'\r'/'%0D'}"
-          echo ::set-output name=BUILD_LOG::$BUILD_LOG
-
       - name: Upload json
         uses: svenstaro/upload-release-action@v2
         with:
@@ -206,22 +166,9 @@ jobs:
           tag: ${{ needs.get_next_version_code.outputs.NEXT_VER }}
           file_glob: true
           overwrite: false
-          
+
       - name: Switch to update branch
         run: git checkout -f update || git switch --discard-changes --orphan update
-
-      - name: Update changelog
-        id: update_config
-        run: |
-          cp -f build.log latest_build.md
-          CHANGELOG_URL="https://raw.githubusercontent.com/Kingsmanvn-Official/Revanced-tool/update/latest_build.md"
-          
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          branch: update
-          skip_checkout: true
-          file_pattern: latest_build.md
-          commit_message: Bump version ${{ needs.get_next_version_code.outputs.NEXT_VER }}
 
   build3:
     name: 'AMOLED NO ROOT...'
@@ -255,7 +202,7 @@ jobs:
           SHORTS=true; TYPE=true; ROUND=true; FEATURE="always-autorepeat hide-autoplay-button"; AMOLED=false; ICONS=true; OPTIMIZATION=true; DEVICE='arm64-v8a'; VERSION='Default'
           fi
           . .github/install.sh
-      
+
       - name: Get output
         id: get_output
         run: |
@@ -267,7 +214,7 @@ jobs:
           BUILD_LOG="${BUILD_LOG//$'\n'/'%0A'}"
           BUILD_LOG="${BUILD_LOG//$'\r'/'%0D'}"
           echo ::set-output name=BUILD_LOG::$BUILD_LOG
-          
+
       - name: Upload modules to release
         uses: svenstaro/upload-release-action@v2
         with:
@@ -278,7 +225,7 @@ jobs:
           tag: ${{ needs.get_next_version_code.outputs.NEXT_VER }}
           file_glob: true
           overwrite: false
-          
+
       - name: Switch to update branch
         run: git checkout -f update || git switch --discard-changes --orphan update
 
@@ -287,7 +234,7 @@ jobs:
         run: |
           cp -f build.log latest_build.md
           CHANGELOG_URL="https://raw.githubusercontent.com/Kingsmanvn-Official/Revanced-tool/update/latest_build.md"
-          
+
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           branch: update
@@ -328,18 +275,6 @@ jobs:
           fi
           . .github/install.sh
 
-      - name: Get output
-        id: get_output
-        run: |
-          bash ./buildlog.sh
-          echo -e "\nYouTube version: ${{ env.VS }}" >>build.log
-          echo -e "\n[Revanced-tool repo]($GITHUB_SERVER_URL/Kingsmanvn-Official/Revanced-tool)" >>build.log
-          BUILD_LOG=$(cat build.log)
-          BUILD_LOG="${BUILD_LOG//'%'/'%25'}"
-          BUILD_LOG="${BUILD_LOG//$'\n'/'%0A'}"
-          BUILD_LOG="${BUILD_LOG//$'\r'/'%0D'}"
-          echo ::set-output name=BUILD_LOG::$BUILD_LOG
-          
       - name: Upload json
         uses: svenstaro/upload-release-action@v2
         with:
@@ -360,27 +295,6 @@ jobs:
           tag: ${{ needs.get_next_version_code.outputs.NEXT_VER }}
           file_glob: true
           overwrite: false
-          
-      - name: Switch to update branch
-        run: git checkout -f update || git switch --discard-changes --orphan update
-
-      - name: Update changelog
-        id: update_config
-        run: |
-          cp -f build.log latest_build.md
-          CHANGELOG_URL="https://raw.githubusercontent.com/Kingsmanvn-Official/Revanced-tool/update/latest_build.md"
-          
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: Bump version ${{ needs.get_next_version_code.outputs.NEXT_VER }}
-          branch: update
-          commit_options: '--all --message'
-          file_pattern: latest_build.md
-          add_options: '--update'
-          push_options: '--force'
-          skip_fetch: true
-          skip_checkout: true
-          create_branch: false
 
   Notify:
     needs:
