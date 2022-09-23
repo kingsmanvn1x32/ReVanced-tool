@@ -23,7 +23,7 @@ jobs:
           source get_buildlog.sh
           
           is_youtube_latest() {
-            if [[ $YT_PATCHER_ARGS == *"--experimental"* ]]; then
+            if [[ $YT_PATCHER_NEW_VER == *"--new"* ]]; then
               declare -r cur_yt=$(sed -n 's/.*YouTube version: \(.*\)/\1/p' latest_build.md | xargs)
               [ -z "$cur_yt" ] && return 1 # empty, fail=>dont build
               declare -r last_ver=$(get_apk_vers "https://www.apkmirror.com/uploads/?appcategory=youtube" | get_largest_ver)
