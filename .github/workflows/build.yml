@@ -65,7 +65,7 @@ jobs:
         run: |
           # TAG=$(git tag --sort=creatordate | tail -1)
           # fetch it from github
-          TAG=$(wget https://api.github.com/repos/Kingsmanvn-Official/releases/latest -O- | tr -d ' ' | sed -n 's/.*"tag_name":"\(.*\)".*/\1/p')
+          TAG=$(wget https://api.github.com/repos/Kingsmanvn-Official/Revanced-tool/releases/latest -O- | tr -d ' ' | sed -n 's/.*"tag_name":"\(.*\)".*/\1/p')
           if [ -z "$TAG" ]; then TAG=0; fi
           echo ::set-output name=NEXT_VER_CODE::$((TAG + 1))
 
@@ -132,7 +132,7 @@ jobs:
         id: update_config
         run: |
           cp -f build.log latest_build.md
-          CHANGELOG_URL="https://raw.githubusercontent.com/Kingsmanvn-Official/update/latest_build.md"
+          CHANGELOG_URL="https://raw.githubusercontent.com/Kingsmanvn-Official/Revanced-tool/update/latest_build.md"
           
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
@@ -214,7 +214,7 @@ jobs:
         id: update_config
         run: |
           cp -f build.log latest_build.md
-          CHANGELOG_URL="https://raw.githubusercontent.com/Kingsmanvn-Official/update/latest_build.md"
+          CHANGELOG_URL="https://raw.githubusercontent.com/Kingsmanvn-Official/Revanced-tool/update/latest_build.md"
           
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
@@ -286,7 +286,7 @@ jobs:
         id: update_config
         run: |
           cp -f build.log latest_build.md
-          CHANGELOG_URL="https://raw.githubusercontent.com/Kingsmanvn-Official/update/latest_build.md"
+          CHANGELOG_URL="https://raw.githubusercontent.com/Kingsmanvn-Official/Revanced-tool/update/latest_build.md"
           
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
@@ -368,7 +368,7 @@ jobs:
         id: update_config
         run: |
           cp -f build.log latest_build.md
-          CHANGELOG_URL="https://raw.githubusercontent.com/Kingsmanvn-Official/update/latest_build.md"
+          CHANGELOG_URL="https://raw.githubusercontent.com/Kingsmanvn-Official/Revanced-tool/update/latest_build.md"
           
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
