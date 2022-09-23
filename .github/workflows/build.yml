@@ -118,7 +118,7 @@ jobs:
         uses: svenstaro/upload-release-action@v2
         with:
           body: ${{ steps.get_output.outputs.BUILD_LOG }}
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          repo_token: ${{ github.token }}
           file: Up/*
           release_name: Revanced-V${{ env.VS }}-${{ needs.get_next_version_code.outputs.NEXT_VER }}
           tag: ${{ needs.get_next_version_code.outputs.NEXT_VER }}
@@ -189,7 +189,7 @@ jobs:
       - name: Upload json
         uses: softprops/action-gh-release@v1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ github.token }}
           name: Update
           tag_name: Up
           files: Up*.json
@@ -199,7 +199,7 @@ jobs:
         uses: svenstaro/upload-release-action@v2
         with:
           body: ${{ steps.get_output.outputs.BUILD_LOG }}
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          repo_token: ${{ github.token }}
           file: Up/*
           release_name: Revanced-V${{ env.VS }}-${{ needs.get_next_version_code.outputs.NEXT_VER }}
           tag: ${{ needs.get_next_version_code.outputs.NEXT_VER }}
@@ -271,7 +271,7 @@ jobs:
         uses: svenstaro/upload-release-action@v2
         with:
           body: ${{ steps.get_output.outputs.BUILD_LOG }}
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          repo_token: ${{ github.token }}
           file: Up/*
           release_name: Revanced-V${{ env.VS }}-${{ needs.get_next_version_code.outputs.NEXT_VER }}
           tag: ${{ needs.get_next_version_code.outputs.NEXT_VER }}
@@ -342,7 +342,7 @@ jobs:
       - name: Upload json
         uses: softprops/action-gh-release@v1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ github.token }}
           name: Update
           tag_name: Up
           files: Up*.json
@@ -352,7 +352,7 @@ jobs:
         uses: svenstaro/upload-release-action@v2
         with:
           body: ${{ steps.get_output.outputs.BUILD_LOG }}
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          repo_token: ${{ github.token }}
           file: Up/*
           release_name: Revanced-V${{ env.VS }}-${{ needs.get_next_version_code.outputs.NEXT_VER }}
           tag: ${{ needs.get_next_version_code.outputs.NEXT_VER }}
