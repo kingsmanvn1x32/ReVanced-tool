@@ -16,9 +16,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-          submodules: true
           
       - name: Switch to release branch
         run: git checkout -f release || git switch --discard-changes --orphan update
@@ -38,6 +35,7 @@ jobs:
           skip_checkout: true
           file_pattern: release.json
           commit_message: Update release.json on ${{ steps.date.outputs.date }}
+          push_options: '-f -u'
           
       - uses: actions/setup-python@v4
         with:
@@ -70,7 +68,7 @@ jobs:
             
             ${{ steps.pyscript.outputs.stdout }}
             
-            Visit [ReVanced magisk](https://github.com/Kingsmanvn-Official/Revanced-magisk)
+            Visit [ReVanced YouTube magisk](https://github.com/Kingsmanvn-Official/Revanced-tool)
             
             Follow @KingsmanvnBot
 
