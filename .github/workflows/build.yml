@@ -68,7 +68,7 @@ jobs:
           echo ::set-output name=NEXT_VER_CODE::$((TAG + 1))
 
       - name: Set env
-        run: echo "NEXT_VER_CODE=${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}" >> $GITHUB_ENV
+        run: echo "NEXT_VER=${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}" >> $GITHUB_ENV
 
   build1:
     name: 'NO ROOT...'
@@ -119,8 +119,8 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           token: ${{ github.token }}
-          name: Revanced-V${{ env.VS }}-${{ env.NEXT_VER_CODE }}
-          tag_name: ${{ env.NEXT_VER_CODE }}
+          name: Revanced-V${{ env.VS }}-${{ env.NEXT_VER }}
+          tag_name: ${{ env.NEXT_VER }}
           files: Up/*
 
       - name: Switch to update branch
@@ -137,7 +137,7 @@ jobs:
           branch: update
           skip_checkout: true
           file_pattern: latest_build.md
-          commit_message: Bump version ${{ env.NEXT_VER_CODE }}
+          commit_message: Bump version ${{ env.NEXT_VER }}
 
   build2:
     name: 'ROOT...'
@@ -196,8 +196,8 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           token: ${{ github.token }}
-          name: Revanced-V${{ env.VS }}-${{ env.NEXT_VER_CODE }}
-          tag_name: ${{ env.NEXT_VER_CODE }}
+          name: Revanced-V${{ env.VS }}-${{ env.NEXT_VER }}
+          tag_name: ${{ env.NEXT_VER }}
           files: Up/*
           
       - name: Switch to update branch
@@ -214,7 +214,7 @@ jobs:
           branch: update
           skip_checkout: true
           file_pattern: latest_build.md
-          commit_message: Bump version ${{ env.NEXT_VER_CODE }}
+          commit_message: Bump version ${{ env.NEXT_VER }}
 
   build3:
     name: 'AMOLED NO ROOT...'
@@ -265,8 +265,8 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           token: ${{ github.token }}
-          name: Revanced-V${{ env.VS }}-${{ env.NEXT_VER_CODE }}
-          tag_name: ${{ env.NEXT_VER_CODE }}
+          name: Revanced-V${{ env.VS }}-${{ env.NEXT_VER }}
+          tag_name: ${{ env.NEXT_VER }}
           files: Up/*
           
       - name: Switch to update branch
@@ -283,7 +283,7 @@ jobs:
           branch: update
           skip_checkout: true
           file_pattern: latest_build.md
-          commit_message: Bump version ${{ env.NEXT_VER_CODE }}
+          commit_message: Bump version ${{ env.NEXT_VER }}
 
   build4:
     name: 'AMOLED ROOT...'
@@ -342,8 +342,8 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           token: ${{ github.token }}
-          name: Revanced-V${{ env.VS }}-${{ env.NEXT_VER_CODE }}
-          tag_name: ${{ env.NEXT_VER_CODE }}
+          name: Revanced-V${{ env.VS }}-${{ env.NEXT_VER }}
+          tag_name: ${{ env.NEXT_VER }}
           files: Up/*
           
       - name: Switch to update branch
@@ -360,7 +360,7 @@ jobs:
           branch: update
           skip_checkout: true
           file_pattern: latest_build.md
-          commit_message: Bump version ${{ env.NEXT_VER_CODE }}
+          commit_message: Bump version ${{ env.NEXT_VER }}
           
   Notify:
     needs:
