@@ -123,7 +123,7 @@ jobs:
           release_name: Revanced-V${{ env.VS }}-${{ needs.get_next_version_code.outputs.NEXT_VER }}
           tag: ${{ needs.get_next_version_code.outputs.NEXT_VER }}
           file_glob: true
-          overwrite: false
+          overwrite: true
 
       - name: Switch to update branch
         run: git checkout -f update || git switch --discard-changes --orphan update
@@ -185,15 +185,16 @@ jobs:
           BUILD_LOG="${BUILD_LOG//$'\n'/'%0A'}"
           BUILD_LOG="${BUILD_LOG//$'\r'/'%0D'}"
           echo ::set-output name=BUILD_LOG::$BUILD_LOG
-          
+
       - name: Upload json
-        uses: softprops/action-gh-release@v1
+        uses: svenstaro/upload-release-action@v2
         with:
-          token: ${{ github.token }}
-          name: Update
-          tag_name: Up
-          files: Up*.json
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: ./Up*.json
+          tag: Up
+          file_glob: true
           prerelease: true
+          overwrite: true
 
       - name: Upload modules to release
         uses: svenstaro/upload-release-action@v2
@@ -340,13 +341,14 @@ jobs:
           echo ::set-output name=BUILD_LOG::$BUILD_LOG
           
       - name: Upload json
-        uses: softprops/action-gh-release@v1
+        uses: svenstaro/upload-release-action@v2
         with:
-          token: ${{ github.token }}
-          name: Update
-          tag_name: Up
-          files: Up*.json
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: ./Up*.json
+          tag: Up
+          file_glob: true
           prerelease: true
+          overwrite: true
 
       - name: Upload modules to release
         uses: svenstaro/upload-release-action@v2
