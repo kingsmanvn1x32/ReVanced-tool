@@ -120,7 +120,7 @@ jobs:
           body: ${{ steps.get_output.outputs.BUILD_LOG }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ./Up/*
-          release_name: Revanced-V${{ env.VS }}-${{ needs.get_next_version_code.outputs.NEXT_VER }}
+          release_name: Revanced-V${{ env.VS }}
           tag: ${{ needs.get_next_version_code.outputs.NEXT_VER }}
           file_glob: true
           overwrite: true
@@ -202,7 +202,7 @@ jobs:
           body: ${{ steps.get_output.outputs.BUILD_LOG }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ./Up/*
-          release_name: Revanced-V${{ env.VS }}-${{ needs.get_next_version_code.outputs.NEXT_VER }}
+          release_name: Revanced-V${{ env.VS }}
           tag: ${{ needs.get_next_version_code.outputs.NEXT_VER }}
           file_glob: true
           overwrite: false
@@ -274,7 +274,7 @@ jobs:
           body: ${{ steps.get_output.outputs.BUILD_LOG }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ./Up/*
-          release_name: Revanced-V${{ env.VS }}-${{ needs.get_next_version_code.outputs.NEXT_VER }}
+          release_name: Revanced-V${{ env.VS }}
           tag: ${{ needs.get_next_version_code.outputs.NEXT_VER }}
           file_glob: true
           overwrite: false
@@ -356,7 +356,7 @@ jobs:
           body: ${{ steps.get_output.outputs.BUILD_LOG }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ./Up/*
-          release_name: Revanced-V${{ env.VS }}-${{ needs.get_next_version_code.outputs.NEXT_VER }}
+          release_name: Revanced-V${{ env.VS }}
           tag: ${{ needs.get_next_version_code.outputs.NEXT_VER }}
           file_glob: true
           overwrite: false
@@ -374,8 +374,12 @@ jobs:
         with:
           branch: update
           skip_checkout: true
+          skip_fetch: true
           file_pattern: latest_build.md
           commit_message: Bump version ${{ needs.get_next_version_code.outputs.NEXT_VER }}
+          add_options: '-f'
+          commit_options: '-m'
+          push_options: '--force'
           
   Notify:
     needs:
