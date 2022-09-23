@@ -102,6 +102,18 @@ jobs:
           fi
           . .github/install.sh
 
+      - name: Get build log
+        id: get_output
+        run: |
+          bash ./buildlog.sh
+          echo -e "\nYouTube version: ${{ env.VS }}" >>build.log
+          echo -e "\n[Revanced-tool repo]($GITHUB_SERVER_URL/Kingsmanvn-Official/Revanced-tool)" >>build.log
+          BUILD_LOG=$(cat build.log)
+          BUILD_LOG="${BUILD_LOG//'%'/'%25'}"
+          BUILD_LOG="${BUILD_LOG//$'\n'/'%0A'}"
+          BUILD_LOG="${BUILD_LOG//$'\r'/'%0D'}"
+          echo ::set-output name=BUILD_LOG::$BUILD_LOG
+
       - name: Upload modules to release
         uses: svenstaro/upload-release-action@v2
         with:
@@ -156,6 +168,18 @@ jobs:
           prerelease: true
           overwrite: true
 
+      - name: Get build log
+        id: get_output
+        run: |
+          bash ./buildlog.sh
+          echo -e "\nYouTube version: ${{ env.VS }}" >>build.log
+          echo -e "\n[Revanced-tool repo]($GITHUB_SERVER_URL/Kingsmanvn-Official/Revanced-tool)" >>build.log
+          BUILD_LOG=$(cat build.log)
+          BUILD_LOG="${BUILD_LOG//'%'/'%25'}"
+          BUILD_LOG="${BUILD_LOG//$'\n'/'%0A'}"
+          BUILD_LOG="${BUILD_LOG//$'\r'/'%0D'}"
+          echo ::set-output name=BUILD_LOG::$BUILD_LOG
+
       - name: Upload modules to release
         uses: svenstaro/upload-release-action@v2
         with:
@@ -203,7 +227,7 @@ jobs:
           fi
           . .github/install.sh
 
-      - name: Get output
+      - name: Get build log
         id: get_output
         run: |
           bash ./buildlog.sh
@@ -285,6 +309,18 @@ jobs:
           file_glob: true
           prerelease: true
           overwrite: true
+
+      - name: Get build log
+        id: get_output
+        run: |
+          bash ./buildlog.sh
+          echo -e "\nYouTube version: ${{ env.VS }}" >>build.log
+          echo -e "\n[Revanced-tool repo]($GITHUB_SERVER_URL/Kingsmanvn-Official/Revanced-tool)" >>build.log
+          BUILD_LOG=$(cat build.log)
+          BUILD_LOG="${BUILD_LOG//'%'/'%25'}"
+          BUILD_LOG="${BUILD_LOG//$'\n'/'%0A'}"
+          BUILD_LOG="${BUILD_LOG//$'\r'/'%0D'}"
+          echo ::set-output name=BUILD_LOG::$BUILD_LOG
 
       - name: Upload modules to release
         uses: svenstaro/upload-release-action@v2
