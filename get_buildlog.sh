@@ -5,7 +5,6 @@ source semver
 TEMP_DIR="temp"
 BUILD_DIR="build"
 
-NEXT_VER_CODE=${NEXT_VER_CODE:-$(date +'%Y%m%d')}
 WGET_HEADER="User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0"
 
 get_prebuilts() {
