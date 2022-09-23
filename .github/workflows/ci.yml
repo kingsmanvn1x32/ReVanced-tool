@@ -27,7 +27,6 @@ jobs:
             echo "current yt version: $cur_yt"
             echo "latest yt version: $last_ver"
             [ "$cur_yt" != "$last_ver" ] # test success=>build, fail=>dont build
-            fi
           }
           is_patches_latest() {
             declare -r last_patches_url=$(wget -nv -O- https://api.github.com/repos/revanced/revanced-patches/releases/latest | tr -d ' ' | sed -n 's/.*"browser_download_url":"\(.*jar\)".*/\1/p')
