@@ -261,7 +261,7 @@ jobs:
           BUILD_LOG="${BUILD_LOG//$'\r'/'%0D'}"
           echo ::set-output name=BUILD_LOG::$BUILD_LOG
           
-      - name: name: Upload File
+      - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -338,7 +338,7 @@ jobs:
           tag_name: Up
           files: Up*.json
           prerelease: true
-      - name: name: Upload File
+      - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
