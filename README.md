@@ -7,7 +7,7 @@
 
 - YouTube mod tool automatically
 - Can build Magisk modules or non-root APKs
-- **Note that the [CI workflow](../../actions/workflows/ci.yml) is scheduled to build the modules and APKs every 6 hours if there is a change. You may want to disable it.**
+- **Note that the [CI workflow](../../actions/workflows/ci.yml) is scheduled to build the modules and APKs every 6 hours if there is a change.**
 
 **Use Revanced cli**
 ---
