@@ -376,11 +376,12 @@ jobs:
           branch: update
           commit_options: '--all --message'
           file_pattern: latest_build.md
-          add_options: '--all'
+          add_options: '--update'
           push_options: '--force'
           skip_fetch: true
           skip_checkout: true
-          
+          create_branch: false
+
   Notify:
     needs:
       - build1
