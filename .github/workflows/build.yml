@@ -60,6 +60,8 @@ jobs:
           distribution: "zulu"
           java-version: "17"
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - name: Get next version code
         id: next_ver_code
         run: |
@@ -75,6 +77,8 @@ jobs:
     needs: get_next_version_code
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - name: Setup JDK
         uses: actions/setup-java@v2
         with:
@@ -131,6 +135,8 @@ jobs:
     needs: get_next_version_code
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - name: Setup JDK
         uses: actions/setup-java@v2
         with:
@@ -200,6 +206,8 @@ jobs:
     needs: get_next_version_code
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - name: Setup JDK
         uses: actions/setup-java@v2
         with:
@@ -273,6 +281,8 @@ jobs:
     needs: get_next_version_code
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - name: Setup JDK
         uses: actions/setup-java@v2
         with:
