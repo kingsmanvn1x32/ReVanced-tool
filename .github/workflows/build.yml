@@ -139,7 +139,7 @@ jobs:
           branch: update
           skip_checkout: true
           file_pattern: latest_build.md
-          commit_message: Bump version ${{ env.NEXT_VER }}
+          commit_message: Bump version ${{ needs.get_next_version_code.outputs.NEXT_VER }}
 
   build2:
     name: 'ROOT...'
@@ -221,7 +221,7 @@ jobs:
           branch: update
           skip_checkout: true
           file_pattern: latest_build.md
-          commit_message: Bump version ${{ env.NEXT_VER }}
+          commit_message: Bump version ${{ needs.get_next_version_code.outputs.NEXT_VER }}
 
   build3:
     name: 'AMOLED NO ROOT...'
@@ -293,7 +293,7 @@ jobs:
           branch: update
           skip_checkout: true
           file_pattern: latest_build.md
-          commit_message: Bump version ${{ env.NEXT_VER }}
+          commit_message: Bump version ${{ needs.get_next_version_code.outputs.NEXT_VER }}
 
   build4:
     name: 'AMOLED ROOT...'
@@ -375,7 +375,7 @@ jobs:
           branch: update
           skip_checkout: true
           file_pattern: latest_build.md
-          commit_message: Bump version ${{ env.NEXT_VER }}
+          commit_message: Bump version ${{ needs.get_next_version_code.outputs.NEXT_VER }}
           
   Notify:
     needs:
