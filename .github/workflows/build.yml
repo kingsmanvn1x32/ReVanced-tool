@@ -53,6 +53,14 @@ jobs:
   get_next_version_code:
     runs-on: ubuntu-22.04
     steps:
+      - uses: actions/setup-java@v3
+        with:
+          distribution: "zulu"
+          java-version: "17"
+
+      - name: Checkout
+        uses: actions/checkout@v3
+
       - name: Get next version code
         id: next_ver_code
         run: |
@@ -61,6 +69,7 @@ jobs:
           TAG=$(wget https://api.github.com/repos/$GITHUB_REPOSITORY/releases/latest -O- | tr -d ' ' | sed -n 's/.*"tag_name":"\(.*\)".*/\1/p')
           if [ -z "$TAG" ]; then TAG=0; fi
           echo ::set-output name=NEXT_VER_CODE::$((TAG + 1))
+
   build1:
     name: 'NO ROOT...'
     runs-on: ubuntu-22.04
