@@ -3,6 +3,8 @@
 [![CI](https://github.com/Kingsmanvn-Official/Revanced-tool/actions/workflows/ci.yml/badge.svg?event=schedule)](https://github.com/Kingsmanvn-Official/Revanced-tool/actions/workflows/ci.yml)
 
 - YouTube mod tool automatically
+- Can build Magisk modules or non-root APKs
+- **Note that the [CI workflow](../../actions/workflows/ci.yml) is scheduled to build the modules and APKs every 6 hours if there is a change. You may want to disable it.**
 
 **Use Revanced cli**
 ---
@@ -64,26 +66,5 @@
   > [Paypal](http://paypal.me/kingsmanvn)
 
   > **99966889999999 - MB Bank**
-
-**Instructions**
----
-
-- Turn on website mode for computer
-
-- And follow the following
-
-<img src="https://github.com/Kingsmanvn-Official/Revanced-tool/releases/download/Tmp/hd1.jpg" height="auto" width="100%" /> <img src="https://github.com/Kingsmanvn-Official/Revanced-tool/releases/download/Tmp/hd2.jpg" height="auto" width="100%" />
-<img src="https://github.com/Kingsmanvn-Official/Revanced-tool/releases/download/Tmp/hd3.jpg" height="auto" width="100%" /> <img src="https://github.com/Kingsmanvn-Official/Revanced-tool/releases/download/Tmp/hd4.jpg" height="auto" width="100%" />
-<img src="https://github.com/Kingsmanvn-Official/Revanced-tool/releases/download/Tmp/hd5.jpg" height="auto" width="100%" /> <img src="https://github.com/Kingsmanvn-Official/Revanced-tool/releases/download/Tmp/hd6.jpg" height="auto" width="100%" />
-<img src="https://github.com/Kingsmanvn-Official/Revanced-tool/releases/download/Tmp/hd7.jpg" height="auto" width="100%" /> <img src="https://github.com/Kingsmanvn-Official/Revanced-tool/releases/download/Tmp/hd8.jpg" height="auto" width="100%" />
-<img src="https://github.com/Kingsmanvn-Official/Revanced-tool/releases/download/Tmp/hd9.jpg" height="auto" width="100%" /> <img src="https://github.com/Kingsmanvn-Official/Revanced-tool/releases/download/Tmp/hd10.jpg" height="auto" width="100%" />
-<img src="https://github.com/Kingsmanvn-Official/Revanced-tool/releases/download/Tmp/hd11.jpg" height="auto" width="100%" /> <img src="https://github.com/Kingsmanvn-Official/Revanced-tool/releases/download/Tmp/hd12.jpg" height="auto" width="100%" />
-
-**Branch sync**
----
-
-- Press update branch to keep this tool up to date.
-
-<img src="https://github.com/Kingsmanvn-Official/Revanced-tool/releases/download/Tmp/ud.jpg" height="auto" width="100%" />
 
 > Good luck!
