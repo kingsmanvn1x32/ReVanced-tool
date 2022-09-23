@@ -58,12 +58,6 @@ jobs:
           distribution: "zulu"
           java-version: "17"
       - uses: actions/checkout@v3
-      - name: Create tag artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: ${{github.ref_name}}
-          path: Release
-
       - name: Get next version code
         id: next_ver_code
         run: |
@@ -72,6 +66,9 @@ jobs:
           TAG=$(wget https://api.github.com/repos/$GITHUB_REPOSITORY/releases/latest -O- | tr -d ' ' | sed -n 's/.*"tag_name":"\(.*\)".*/\1/p')
           if [ -z "$TAG" ]; then TAG=0; fi
           echo ::set-output name=NEXT_VER_CODE::$((TAG + 1))
+
+      - name: Set env
+        run: "NEXT_VER_CODE=${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}" >> $GITHUB_ENV
 
   build1:
     name: 'NO ROOT...'
@@ -105,15 +102,9 @@ jobs:
           SHORTS=true; TYPE=true; ROUND=true; FEATURE="always-autorepeat hide-autoplay-button"; AMOLED=true; ICONS=true; OPTIMIZATION=true; DEVICE='arm64-v8a'; VERSION='Default'
           fi
           . .github/install.sh
-      
-      - id: date
-        run: echo ::set-output name=date::$(date +'%Y%m%d')
 
       - name: Get output
         id: get_output
-        env:
-          GITHUB_REPOSITORY: $GITHUB_REPOSITORY
-          NEXT_VER_CODE: ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
         run: |
           bash ./buildlog.sh
           echo -e "\nYouTube version: ${{ env.VS }}" >>build.log
@@ -130,8 +121,8 @@ jobs:
           body: ${{ steps.get_output.outputs.BUILD_LOG }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: Up/*
-          release_name: Revanced-V${{ env.VS }}-${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
-          tag: ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
+          release_name: Revanced-V${{ env.VS }}-${{ env.NEXT_VER_CODE }}
+          tag: ${{ env.NEXT_VER_CODE }}
           file_glob: true
           overwrite: false
           
@@ -149,7 +140,7 @@ jobs:
           branch: update
           skip_checkout: true
           file_pattern: latest_build.md
-          commit_message: Bump version ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
+          commit_message: Bump version ${{ env.NEXT_VER_CODE }}
 
   build2:
     name: 'ROOT...'
@@ -183,15 +174,9 @@ jobs:
           SHORTS=true; TYPE=false; ROUND=true; FEATURE="always-autorepeat hide-autoplay-button"; AMOLED=true; ICONS=true; OPTIMIZATION=true; DEVICE='arm64-v8a'; VERSION='Default'
           fi
           . .github/install.sh
-      
-      - id: date
-        run: echo ::set-output name=date::$(date +'%Y%m%d')
 
       - name: Get output
         id: get_output
-        env:
-          GITHUB_REPOSITORY: $GITHUB_REPOSITORY
-          NEXT_VER_CODE: ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
         run: |
           bash ./buildlog.sh
           echo -e "\nYouTube version: ${{ env.VS }}" >>build.log
@@ -216,8 +201,8 @@ jobs:
           body: ${{ steps.get_output.outputs.BUILD_LOG }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: Up/*
-          release_name: Revanced-V${{ env.VS }}-${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
-          tag: ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
+          release_name: Revanced-V${{ env.VS }}-${{ env.NEXT_VER_CODE }}
+          tag: ${{ env.NEXT_VER_CODE }}
           file_glob: true
           overwrite: false
           
@@ -235,7 +220,7 @@ jobs:
           branch: update
           skip_checkout: true
           file_pattern: latest_build.md
-          commit_message: Bump version ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
+          commit_message: Bump version ${{ env.NEXT_VER_CODE }}
 
   build3:
     name: 'AMOLED NO ROOT...'
@@ -270,14 +255,8 @@ jobs:
           fi
           . .github/install.sh
       
-      - id: date
-        run: echo ::set-output name=date::$(date +'%Y%m%d')
-
       - name: Get output
         id: get_output
-        env:
-          GITHUB_REPOSITORY: $GITHUB_REPOSITORY
-          NEXT_VER_CODE: ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
         run: |
           bash ./buildlog.sh
           echo -e "\nYouTube version: ${{ env.VS }}" >>build.log
@@ -294,8 +273,8 @@ jobs:
           body: ${{ steps.get_output.outputs.BUILD_LOG }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: Up/*
-          release_name: Revanced-V${{ env.VS }}-${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
-          tag: ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
+          release_name: Revanced-V${{ env.VS }}-${{ env.NEXT_VER_CODE }}
+          tag: ${{ env.NEXT_VER_CODE }}
           file_glob: true
           overwrite: false
           
@@ -313,7 +292,7 @@ jobs:
           branch: update
           skip_checkout: true
           file_pattern: latest_build.md
-          commit_message: Bump version ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
+          commit_message: Bump version ${{ env.NEXT_VER_CODE }}
 
   build4:
     name: 'AMOLED ROOT...'
@@ -347,15 +326,9 @@ jobs:
           SHORTS=true; TYPE=false; ROUND=true; FEATURE="always-autorepeat hide-autoplay-button"; AMOLED=false; ICONS=true; OPTIMIZATION=true; DEVICE='arm64-v8a'; VERSION='Default'
           fi
           . .github/install.sh
-      
-      - id: date
-        run: echo ::set-output name=date::$(date +'%Y%m%d')
 
       - name: Get output
         id: get_output
-        env:
-          GITHUB_REPOSITORY: $GITHUB_REPOSITORY
-          NEXT_VER_CODE: ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
         run: |
           bash ./buildlog.sh
           echo -e "\nYouTube version: ${{ env.VS }}" >>build.log
@@ -380,8 +353,8 @@ jobs:
           body: ${{ steps.get_output.outputs.BUILD_LOG }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: Up/*
-          release_name: Revanced-V${{ env.VS }}-${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
-          tag: ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
+          release_name: Revanced-V${{ env.VS }}-${{ env.NEXT_VER_CODE }}
+          tag: ${{ env.NEXT_VER_CODE }}
           file_glob: true
           overwrite: false
           
@@ -392,14 +365,14 @@ jobs:
         id: update_config
         run: |
           cp -f build.log latest_build.md
-          CHANGELOG_URL="https://raw.githubusercontent.com/$GITHUB_REPOSITORY/update/latest_build.md"
+          CHANGELOG_URL="https://raw.githubusercontent.com/Kingsmanvn-Official/update/latest_build.md"
           
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           branch: update
           skip_checkout: true
           file_pattern: latest_build.md
-          commit_message: Bump version ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
+          commit_message: Bump version ${{ env.NEXT_VER_CODE }}
           
   Notify:
     needs:
