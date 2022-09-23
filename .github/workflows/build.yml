@@ -192,7 +192,7 @@ jobs:
           tag_name: Up
           files: Up*.json
           prerelease: true
-      - name: name: Upload File
+      - name: Upload File
         uses: softprops/action-gh-release@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
