@@ -1,6 +1,9 @@
 # Revanced-tool
+[![License](https://img.shields.io/github/license/Kingsmanvn-Official/Revanced-tool?style=flat-square)](https://github.com/Kingsmanvn-Official/revanced-tool/blob/master/LICENSE)
 [![Revanced build](https://github.com/Kingsmanvn-Official/Revanced-tool/actions/workflows/build.yml/badge.svg)](https://github.com/Kingsmanvn-Official/Revanced-tool/actions/workflows/build.yml)
 [![CI](https://github.com/Kingsmanvn-Official/Revanced-tool/actions/workflows/ci.yml/badge.svg?event=schedule)](https://github.com/Kingsmanvn-Official/Revanced-tool/actions/workflows/ci.yml)
+[![Latest release](https://img.shields.io/github/v/release/Kingsmanvn-Official/revanced-tool?style=flat-square)](https://github.com/Kingsmanvn-Official/revanced-tool/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/Kingsmanvn-Official/revanced-tool/total?style=flat-square)](https://github.com/Kingsmanvn-Official/revanced-tool/releases)
 
 - YouTube mod tool automatically
 - Can build Magisk modules or non-root APKs
