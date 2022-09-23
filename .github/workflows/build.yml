@@ -114,18 +114,15 @@ jobs:
           BUILD_LOG="${BUILD_LOG//$'\n'/'%0A'}"
           BUILD_LOG="${BUILD_LOG//$'\r'/'%0D'}"
           echo ::set-output name=BUILD_LOG::$BUILD_LOG
-        
-      - name: Upload modules to release
-        uses: svenstaro/upload-release-action@v2
+
+      - name: Upload File
+        uses: softprops/action-gh-release@v1
         with:
-          body: ${{ steps.get_output.outputs.BUILD_LOG }}
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: Up/*
-          release_name: Revanced-V${{ env.VS }}-${{ env.NEXT_VER_CODE }}
-          tag: ${{ env.NEXT_VER_CODE }}
-          file_glob: true
-          overwrite: false
-          
+          token: ${{ github.token }}
+          name: Revanced-V${{ env.VS }}-${{ env.NEXT_VER_CODE }}
+          tag_name: ${{ env.NEXT_VER_CODE }}
+          files: Up/*
+
       - name: Switch to update branch
         run: git checkout -f update || git switch --discard-changes --orphan update
 
@@ -195,16 +192,13 @@ jobs:
           tag_name: Up
           files: Up*.json
           prerelease: true
-      - name: Upload modules to release
-        uses: svenstaro/upload-release-action@v2
+      - name: name: Upload File
+        uses: softprops/action-gh-release@v1
         with:
-          body: ${{ steps.get_output.outputs.BUILD_LOG }}
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: Up/*
-          release_name: Revanced-V${{ env.VS }}-${{ env.NEXT_VER_CODE }}
-          tag: ${{ env.NEXT_VER_CODE }}
-          file_glob: true
-          overwrite: false
+          token: ${{ github.token }}
+          name: Revanced-V${{ env.VS }}-${{ env.NEXT_VER_CODE }}
+          tag_name: ${{ env.NEXT_VER_CODE }}
+          files: Up/*
           
       - name: Switch to update branch
         run: git checkout -f update || git switch --discard-changes --orphan update
@@ -267,16 +261,13 @@ jobs:
           BUILD_LOG="${BUILD_LOG//$'\r'/'%0D'}"
           echo ::set-output name=BUILD_LOG::$BUILD_LOG
           
-      - name: Upload modules to release
-        uses: svenstaro/upload-release-action@v2
+      - name: name: Upload File
+        uses: softprops/action-gh-release@v1
         with:
-          body: ${{ steps.get_output.outputs.BUILD_LOG }}
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: Up/*
-          release_name: Revanced-V${{ env.VS }}-${{ env.NEXT_VER_CODE }}
-          tag: ${{ env.NEXT_VER_CODE }}
-          file_glob: true
-          overwrite: false
+          token: ${{ github.token }}
+          name: Revanced-V${{ env.VS }}-${{ env.NEXT_VER_CODE }}
+          tag_name: ${{ env.NEXT_VER_CODE }}
+          files: Up/*
           
       - name: Switch to update branch
         run: git checkout -f update || git switch --discard-changes --orphan update
@@ -347,16 +338,13 @@ jobs:
           tag_name: Up
           files: Up*.json
           prerelease: true
-      - name: Upload modules to release
-        uses: svenstaro/upload-release-action@v2
+      - name: name: Upload File
+        uses: softprops/action-gh-release@v1
         with:
-          body: ${{ steps.get_output.outputs.BUILD_LOG }}
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: Up/*
-          release_name: Revanced-V${{ env.VS }}-${{ env.NEXT_VER_CODE }}
-          tag: ${{ env.NEXT_VER_CODE }}
-          file_glob: true
-          overwrite: false
+          token: ${{ github.token }}
+          name: Revanced-V${{ env.VS }}-${{ env.NEXT_VER_CODE }}
+          tag_name: ${{ env.NEXT_VER_CODE }}
+          files: Up/*
           
       - name: Switch to update branch
         run: git checkout -f update || git switch --discard-changes --orphan update
