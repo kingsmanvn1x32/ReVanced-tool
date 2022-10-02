@@ -116,16 +116,16 @@ jobs:
           BUILD_LOG="${BUILD_LOG//$'\r'/'%0D'}"
           echo ::set-output name=BUILD_LOG::$BUILD_LOG
 
-      - name: Upload modules to release
+      - name: Upload to release
         uses: svenstaro/upload-release-action@v2
         with:
           body: ${{ steps.get_output.outputs.BUILD_LOG }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ./Up/*
-          release_name: Revanced-V${{ env.VS }}
+          release_name: Revanced-v${{ env.VS }}
           tag: ${{ needs.get_next_version_code.outputs.NEXT_VER }}
           file_glob: true
-          overwrite: true
+          overwrite: false
 
   build2:
     name: 'ROOT...'
@@ -184,19 +184,16 @@ jobs:
           BUILD_LOG="${BUILD_LOG//$'\r'/'%0D'}"
           echo ::set-output name=BUILD_LOG::$BUILD_LOG
 
-      - name: Upload modules to release
+      - name: Upload to release
         uses: svenstaro/upload-release-action@v2
         with:
           body: ${{ steps.get_output.outputs.BUILD_LOG }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ./Up/*
-          release_name: Revanced-V${{ env.VS }}
+          release_name: Revanced-v${{ env.VS }}
           tag: ${{ needs.get_next_version_code.outputs.NEXT_VER }}
           file_glob: true
           overwrite: false
-
-      - name: Switch to update branch
-        run: git checkout -f update || git switch --discard-changes --orphan update
 
   build3:
     name: 'AMOLED NO ROOT...'
@@ -245,13 +242,13 @@ jobs:
           BUILD_LOG="${BUILD_LOG//$'\r'/'%0D'}"
           echo ::set-output name=BUILD_LOG::$BUILD_LOG
 
-      - name: Upload modules to release
+      - name: Upload to release
         uses: svenstaro/upload-release-action@v2
         with:
           body: ${{ steps.get_output.outputs.BUILD_LOG }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ./Up/*
-          release_name: Revanced-V${{ env.VS }}
+          release_name: Revanced-v${{ env.VS }}
           tag: ${{ needs.get_next_version_code.outputs.NEXT_VER }}
           file_glob: true
           overwrite: false
@@ -330,13 +327,13 @@ jobs:
           BUILD_LOG="${BUILD_LOG//$'\r'/'%0D'}"
           echo ::set-output name=BUILD_LOG::$BUILD_LOG
 
-      - name: Upload modules to release
+      - name: Upload to release
         uses: svenstaro/upload-release-action@v2
         with:
           body: ${{ steps.get_output.outputs.BUILD_LOG }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ./Up/*
-          release_name: Revanced-V${{ env.VS }}
+          release_name: Revanced-v${{ env.VS }}
           tag: ${{ needs.get_next_version_code.outputs.NEXT_VER }}
           file_glob: true
           overwrite: false
