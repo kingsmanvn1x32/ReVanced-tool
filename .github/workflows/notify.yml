@@ -70,9 +70,7 @@ jobs:
             
             ${{ steps.pyscript.outputs.stdout }}
             
-            Visit [ReVanced YouTube magisk](https://github.com/Kingsmanvn-Official/Revanced-tool)
-            
-            Follow @KingsmanvnBot
+            Github: [ReVanced YouTube magisk](https://github.com/Kingsmanvn-Official/Revanced-tool)
 
             [Donate Website](https://kingsmanvn.cf)
             [Paypal](http://paypal.me/kingsmanvn)
