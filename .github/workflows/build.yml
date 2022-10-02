@@ -6,8 +6,6 @@ on:
         required: true
       TELEGRAM_TOKEN:
         required: true
-  schedule:
-    - cron: '30 23 * * *'
   workflow_dispatch:
     inputs:
       VERSION:
