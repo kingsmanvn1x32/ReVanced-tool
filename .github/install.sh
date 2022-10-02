@@ -1,4 +1,5 @@
 Likk="$GITHUB_WORKSPACE"
+sudo apt update && sudo apt upgrade -y
 sudo apt install zipalign >/dev/null
 User="User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0"
 apktool(){ java -jar $Likk/.github/Tools/kikfox.jar "$@"; }
