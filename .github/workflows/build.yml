@@ -109,6 +109,7 @@ jobs:
         run: |
           bash ./buildlog.sh
           echo -e "\nYouTube version: ${{ env.VS }}" >>build.log
+          echo -e "\nUse [MicroG APK](https://github.com/inotia00/VancedMicroG/releases/latest/download/microg.apk) for YouTube and Music" >>build.log
           echo -e "\n[Revanced-tool repo]($GITHUB_SERVER_URL/${{ github.repository }})" >>build.log
           BUILD_LOG=$(cat build.log)
           BUILD_LOG="${BUILD_LOG//'%'/'%25'}"
@@ -177,6 +178,7 @@ jobs:
         run: |
           bash ./buildlog.sh
           echo -e "\nYouTube version: ${{ env.VS }}" >>build.log
+          echo -e "\nUse [MicroG APK](https://github.com/inotia00/VancedMicroG/releases/latest/download/microg.apk) for YouTube and Music" >>build.log
           echo -e "\n[Revanced-tool repo]($GITHUB_SERVER_URL/${{ github.repository }})" >>build.log
           BUILD_LOG=$(cat build.log)
           BUILD_LOG="${BUILD_LOG//'%'/'%25'}"
@@ -235,6 +237,7 @@ jobs:
         run: |
           bash ./buildlog.sh
           echo -e "\nYouTube version: ${{ env.VS }}" >>build.log
+          echo -e "\nUse [MicroG APK](https://github.com/inotia00/VancedMicroG/releases/latest/download/microg.apk) for YouTube and Music" >>build.log
           echo -e "\n[Revanced-tool repo]($GITHUB_SERVER_URL/${{ github.repository }})" >>build.log
           BUILD_LOG=$(cat build.log)
           BUILD_LOG="${BUILD_LOG//'%'/'%25'}"
@@ -320,6 +323,7 @@ jobs:
         run: |
           bash ./buildlog.sh
           echo -e "\nYouTube version: ${{ env.VS }}" >>build.log
+          echo -e "\nUse [MicroG APK](https://github.com/inotia00/VancedMicroG/releases/latest/download/microg.apk) for YouTube and Music" >>build.log
           echo -e "\n[Revanced-tool repo]($GITHUB_SERVER_URL/${{ github.repository }})" >>build.log
           BUILD_LOG=$(cat build.log)
           BUILD_LOG="${BUILD_LOG//'%'/'%25'}"
