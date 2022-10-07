@@ -122,11 +122,11 @@ jobs:
         with:
           body: ${{ steps.get_output.outputs.BUILD_LOG }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: ./Up/*
+          file: Up/*
           release_name: Revanced-v${{ env.VS }}
           tag: ${{ needs.get_next_version_code.outputs.NEXT_VER }}
           file_glob: true
-          overwrite: false
+          overwrite: true
 
   build2:
     name: 'ROOT...'
@@ -167,7 +167,7 @@ jobs:
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: ./Up*.json
+          file: Up*.json
           tag: Up
           file_glob: true
           prerelease: true
@@ -191,11 +191,11 @@ jobs:
         with:
           body: ${{ steps.get_output.outputs.BUILD_LOG }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: ./Up/*
+          file: Up/*
           release_name: Revanced-v${{ env.VS }}
           tag: ${{ needs.get_next_version_code.outputs.NEXT_VER }}
           file_glob: true
-          overwrite: false
+          overwrite: true
 
   build3:
     name: 'AMOLED NO ROOT...'
@@ -250,11 +250,11 @@ jobs:
         with:
           body: ${{ steps.get_output.outputs.BUILD_LOG }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: ./Up/*
+          file: Up/*
           release_name: Revanced-v${{ env.VS }}
           tag: ${{ needs.get_next_version_code.outputs.NEXT_VER }}
           file_glob: true
-          overwrite: false
+          overwrite: true
 
       - name: Switch to update branch
         run: git checkout -f update || git switch --discard-changes --orphan update
@@ -312,7 +312,7 @@ jobs:
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: ./Up*.json
+          file: Up*.json
           tag: Up
           file_glob: true
           prerelease: true
@@ -336,11 +336,11 @@ jobs:
         with:
           body: ${{ steps.get_output.outputs.BUILD_LOG }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: ./Up/*
+          file: Up/*
           release_name: Revanced-v${{ env.VS }}
           tag: ${{ needs.get_next_version_code.outputs.NEXT_VER }}
           file_glob: true
-          overwrite: false
+          overwrite: true
 
   Notify:
     needs:
