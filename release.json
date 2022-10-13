@@ -1,9 +1,9 @@
 {
-  "url": "https://api.github.com/repos/Kingsmanvn-Official/Revanced-tool/releases/79594508",
-  "assets_url": "https://api.github.com/repos/Kingsmanvn-Official/Revanced-tool/releases/79594508/assets",
-  "upload_url": "https://uploads.github.com/repos/Kingsmanvn-Official/Revanced-tool/releases/79594508/assets{?name,label}",
-  "html_url": "https://github.com/Kingsmanvn-Official/Revanced-tool/releases/tag/50",
-  "id": 79594508,
+  "url": "https://api.github.com/repos/Kingsmanvn-Official/Revanced-tool/releases/79726100",
+  "assets_url": "https://api.github.com/repos/Kingsmanvn-Official/Revanced-tool/releases/79726100/assets",
+  "upload_url": "https://uploads.github.com/repos/Kingsmanvn-Official/Revanced-tool/releases/79726100/assets{?name,label}",
+  "html_url": "https://github.com/Kingsmanvn-Official/Revanced-tool/releases/tag/51",
+  "id": 79726100,
   "author": {
     "login": "github-actions[bot]",
     "id": 41898282,
@@ -24,19 +24,19 @@
     "type": "Bot",
     "site_admin": false
   },
-  "node_id": "RE_kwDOICdUDM4EvoQM",
-  "tag_name": "50",
+  "node_id": "RE_kwDOICdUDM4EwIYU",
+  "tag_name": "51",
   "target_commitish": "main",
   "name": "Revanced-v17.36.37",
   "draft": false,
   "prerelease": false,
   "created_at": "2022-10-07T10:11:16Z",
-  "published_at": "2022-10-12T01:57:05Z",
+  "published_at": "2022-10-13T06:44:20Z",
   "assets": [
     {
-      "url": "https://api.github.com/repos/Kingsmanvn-Official/Revanced-tool/releases/assets/80715396",
-      "id": 80715396,
-      "node_id": "RA_kwDOICdUDM4Ez56E",
+      "url": "https://api.github.com/repos/Kingsmanvn-Official/Revanced-tool/releases/assets/80858378",
+      "id": 80858378,
+      "node_id": "RA_kwDOICdUDM4E0c0K",
       "name": "YT-Magisk-17.36.37-arm64.Amoled.Zip",
       "label": "",
       "uploader": {
@@ -61,16 +61,16 @@
       },
       "content_type": "binary/octet-stream",
       "state": "uploaded",
-      "size": 57392616,
+      "size": 57367608,
       "download_count": 0,
-      "created_at": "2022-10-12T01:58:42Z",
-      "updated_at": "2022-10-12T01:58:43Z",
-      "browser_download_url": "https://github.com/Kingsmanvn-Official/Revanced-tool/releases/download/50/YT-Magisk-17.36.37-arm64.Amoled.Zip"
+      "created_at": "2022-10-13T06:45:10Z",
+      "updated_at": "2022-10-13T06:45:12Z",
+      "browser_download_url": "https://github.com/Kingsmanvn-Official/Revanced-tool/releases/download/51/YT-Magisk-17.36.37-arm64.Amoled.Zip"
     },
     {
-      "url": "https://api.github.com/repos/Kingsmanvn-Official/Revanced-tool/releases/assets/80715353",
-      "id": 80715353,
-      "node_id": "RA_kwDOICdUDM4Ez55Z",
+      "url": "https://api.github.com/repos/Kingsmanvn-Official/Revanced-tool/releases/assets/80858457",
+      "id": 80858457,
+      "node_id": "RA_kwDOICdUDM4E0c1Z",
       "name": "YT-Magisk-17.36.37-arm64.Zip",
       "label": "",
       "uploader": {
@@ -95,16 +95,16 @@
       },
       "content_type": "binary/octet-stream",
       "state": "uploaded",
-      "size": 57387932,
+      "size": 57348044,
       "download_count": 0,
-      "created_at": "2022-10-12T01:58:08Z",
-      "updated_at": "2022-10-12T01:58:09Z",
-      "browser_download_url": "https://github.com/Kingsmanvn-Official/Revanced-tool/releases/download/50/YT-Magisk-17.36.37-arm64.Zip"
+      "created_at": "2022-10-13T06:46:37Z",
+      "updated_at": "2022-10-13T06:46:41Z",
+      "browser_download_url": "https://github.com/Kingsmanvn-Official/Revanced-tool/releases/download/51/YT-Magisk-17.36.37-arm64.Zip"
     },
     {
-      "url": "https://api.github.com/repos/Kingsmanvn-Official/Revanced-tool/releases/assets/80715312",
-      "id": 80715312,
-      "node_id": "RA_kwDOICdUDM4Ez54w",
+      "url": "https://api.github.com/repos/Kingsmanvn-Official/Revanced-tool/releases/assets/80858305",
+      "id": 80858305,
+      "node_id": "RA_kwDOICdUDM4E0czB",
       "name": "YT-NoRoot-17.36.37-arm64.Amoled.apk",
       "label": "",
       "uploader": {
@@ -129,16 +129,16 @@
       },
       "content_type": "application/vnd.android.package-archive",
       "state": "uploaded",
-      "size": 78550704,
+      "size": 78755504,
       "download_count": 0,
-      "created_at": "2022-10-12T01:57:14Z",
-      "updated_at": "2022-10-12T01:57:16Z",
-      "browser_download_url": "https://github.com/Kingsmanvn-Official/Revanced-tool/releases/download/50/YT-NoRoot-17.36.37-arm64.Amoled.apk"
+      "created_at": "2022-10-13T06:44:25Z",
+      "updated_at": "2022-10-13T06:44:28Z",
+      "browser_download_url": "https://github.com/Kingsmanvn-Official/Revanced-tool/releases/download/51/YT-NoRoot-17.36.37-arm64.Amoled.apk"
     },
     {
-      "url": "https://api.github.com/repos/Kingsmanvn-Official/Revanced-tool/releases/assets/80715301",
-      "id": 80715301,
-      "node_id": "RA_kwDOICdUDM4Ez54l",
+      "url": "https://api.github.com/repos/Kingsmanvn-Official/Revanced-tool/releases/assets/80858295",
+      "id": 80858295,
+      "node_id": "RA_kwDOICdUDM4E0cy3",
       "name": "YT-NoRoot-17.36.37-arm64.apk",
       "label": "",
       "uploader": {
@@ -163,14 +163,14 @@
       },
       "content_type": "application/vnd.android.package-archive",
       "state": "uploaded",
-      "size": 78653104,
+      "size": 78599856,
       "download_count": 0,
-      "created_at": "2022-10-12T01:57:05Z",
-      "updated_at": "2022-10-12T01:57:08Z",
-      "browser_download_url": "https://github.com/Kingsmanvn-Official/Revanced-tool/releases/download/50/YT-NoRoot-17.36.37-arm64.apk"
+      "created_at": "2022-10-13T06:44:20Z",
+      "updated_at": "2022-10-13T06:44:23Z",
+      "browser_download_url": "https://github.com/Kingsmanvn-Official/Revanced-tool/releases/download/51/YT-NoRoot-17.36.37-arm64.apk"
     }
   ],
-  "tarball_url": "https://api.github.com/repos/Kingsmanvn-Official/Revanced-tool/tarball/50",
-  "zipball_url": "https://api.github.com/repos/Kingsmanvn-Official/Revanced-tool/zipball/50",
-  "body": "2022-10-12\n \nCLI: revanced-cli-2.14.0-all.jar \n\nIntegrations: app-release-unsigned-v0.51.1.apk \n\nPatches: revanced-patches-2.81.11.jar \n[Patches Changelog](https://github.com/revanced/revanced-patches/releases/tag/v2.81.11) \n\nYouTube version: 17.36.37\n\nUse [MicroG APK](https://github.com/inotia00/VancedMicroG/releases/latest/download/microg.apk) for YouTube and Music\n\n[Revanced-tool repo](https://github.com/Kingsmanvn-Official/Revanced-tool)"
+  "tarball_url": "https://api.github.com/repos/Kingsmanvn-Official/Revanced-tool/tarball/51",
+  "zipball_url": "https://api.github.com/repos/Kingsmanvn-Official/Revanced-tool/zipball/51",
+  "body": "2022-10-13\n \nCLI: revanced-cli-2.14.0-all.jar \n\nIntegrations: app-release-unsigned-v0.52.0.apk \n\nPatches: revanced-patches-2.82.0.jar \n[Patches Changelog](https://github.com/revanced/revanced-patches/releases/tag/v2.82.0) \n\nYouTube version: 17.36.37\n\nUse [MicroG APK](https://github.com/inotia00/VancedMicroG/releases/latest/download/microg.apk) for YouTube and Music\n\n[Revanced-tool repo](https://github.com/Kingsmanvn-Official/Revanced-tool)"
 }
