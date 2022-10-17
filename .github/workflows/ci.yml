@@ -45,13 +45,13 @@ jobs:
           }
           if ! git checkout update; then
             echo "first time building!"
-            echo ::set-output name=SHOULD_BUILD::1
+            echo "SHOULD_BUILD=1" >> $GITHUB_OUTPUT
           elif is_patches_latest || is_youtube_latest; then
             echo "build!"
-            echo ::set-output name=SHOULD_BUILD::1
+            echo "SHOULD_BUILD=1" >> $GITHUB_OUTPUT
           else
             echo "dont build!"
-            echo ::set-output name=SHOULD_BUILD::0
+            echo "SHOULD_BUILD=0" >> $GITHUB_OUTPUT
           fi
     outputs:
       SHOULD_BUILD: ${{ steps.should_build.outputs.SHOULD_BUILD }}
@@ -63,3 +63,4 @@ jobs:
     secrets:
       TELEGRAM_TO: ${{ secrets.TELEGRAM_TO }}
       TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+
