@@ -2,7 +2,7 @@
   
 CLI: revanced-cli-2.14.0-all.jar  
 
-Integrations: app-release-unsigned-v0.55.0.apk  
+Integrations: app-release-unsigned-v0.55.1.apk  
 
 Patches: revanced-patches-2.86.0.jar  
 [Patches Changelog](https://github.com/revanced/revanced-patches/releases/tag/v2.86.0)  
