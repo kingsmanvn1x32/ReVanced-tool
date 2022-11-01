@@ -2,12 +2,12 @@
   
 CLI: revanced-cli-2.15.0-all.jar  
 
-Integrations: app-release-unsigned-v0.65.0.apk  
+Integrations: app-release-unsigned-v0.66.0.apk  
 
-Patches: revanced-patches-2.100.3.jar  
-[Patches Changelog](https://github.com/revanced/revanced-patches/releases/tag/v2.100.3)  
+Patches: revanced-patches-2.101.0.jar  
+[Patches Changelog](https://github.com/revanced/revanced-patches/releases/tag/v2.101.0)  
 
-YouTube version: 17.41.37
+YouTube version: 17.43.36
 
 Use [MicroG APK](https://github.com/inotia00/VancedMicroG/releases/latest/download/microg.apk) for YouTube and Music
 
