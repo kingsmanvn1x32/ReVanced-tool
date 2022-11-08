@@ -324,3 +324,36 @@
 <string name="revanced_hide_captions_button_title" public="false">Ẩn nút phụ đề</string>
 <string name="revanced_hide_captions_button_summary_on" public="false">Đã ẩn</string>
 <string name="revanced_hide_captions_button_summary_off" public="false">Đang hiện</string>
+<string name="revanced_hide_hide_artist_card_title" public="false">Ẩn thẻ nghệ sĩ</string>
+<string name="revanced_hide_hide_artist_card_on" public="false">Đã ẩn</string>
+<string name="revanced_hide_hide_artist_card_off" public="false">Đang hiện</string>
+
+<string name="revanced_hide_album_cards_title" public="false">Ẩn thẻ album</string>
+<string name="revanced_hide_album_cards_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_hide_album_cards_summary_off" public="false">Đang hiện</string>
+
+<string name="revanced_hide_comments_section_title" public="false">Xóa phần nhận xét</string>
+<string name="revanced_hide_comments_section_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_hide_comments_section_summary_off" public="false">Đang hiện</string>
+
+
+<string name="revanced_hide_preview_comment_title" public="false">Ẩn nhận xét xem trước</string>
+<string name="revanced_hide_preview_comment_on" public="false">Đã ẩn</string>
+<string name="revanced_hide_preview_comment_off" public="false">Đang hiện</string>
+<string name="revanced_comments_title" public="false">Nhận xét</string><string name="revanced_comments_summary" public="false">Quản lý khả năng hiển thị của phần nhận xét</string>
+
+<string name="revanced_hide_crowdfunding_box_title" public="false">Ẩn hộp huy động vốn cộng đồng</string>
+<string name="revanced_hide_crowdfunding_box_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_hide_crowdfunding_box_summary_off" public="false">Đang hiện</string>
+
+<string name="revanced_hide_shorts_comments_button_title" public="false">Ẩn nút bình luận cho Short video</string>
+<string name="revanced_hide_shorts_comments_button_on" public="false">Đã ẩn</string>
+<string name="revanced_hide_shorts_comments_button_off" public="false">Đang hiện</string>
+
+<string name="revanced_hide_watch_in_vr_title" public="false">Ẩn tùy chọn Xem trong thực tế ảo</string>
+<string name="revanced_hide_watch_in_vr_summary_on" public="false">Đã ẩn</string>
+<string name="revanced_hide_watch_in_vr_summary_off" public="false">Đang hiện</string>
+
+<string name="revanced_fix_playback_title" public="false">Khắc phục sự cố phát lại video</string>
+<string name="revanced_fix_playback_summary_on" public="false">Đã bật</string>
+<string name="revanced_fix_playback_summary_off" public="false">Đã tắt</string>
