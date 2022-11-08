@@ -31,7 +31,7 @@ jobs:
         run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
           
       - name: Push release.json
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v4.15.4
         with:
           branch: release
           skip_checkout: true
@@ -42,7 +42,7 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: '3.10' 
-      - uses: jannekem/run-python-script-action@v1
+      - uses: jannekem/run-python-script-action@v1.5
         id: pyscript
         with:
           script: |
