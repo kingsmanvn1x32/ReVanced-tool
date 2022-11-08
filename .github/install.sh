@@ -18,7 +18,7 @@ cpnn(){
 while true; do
 [ -e "$Likk/tmp/res/values-vi/strings.xml" ] && break || sleep 1
 kakksks2=$(($kakksks2 + 1))
-[ "$kakksks2" == 300 ] && break || sleep 2
+[ "$kakksks2" == 300 ] && break
 done
 sleep 2
 for vakdll in $Likk/Lang/*; do
@@ -32,8 +32,8 @@ Taiyt 'YouTube.apks'
 unzip -qo $Likk/lib/YouTube.apks 'base.apk' -d $Likk/Tav
 while true; do
 [ -e "$Likk/done.txt" ] && break || sleep 1
-kakksks2=$(($kakksks2 + 1))
-[ "$kakksks2" == 300 ] && break || sleep 2
+kakksks=$(($kakksks + 1))
+[ "$kakksks" == 300 ] && break
 done
 sleep 2
 }
@@ -59,14 +59,21 @@ Taive "https://github.com/revanced/revanced-cli/releases/download/v${Vsionnnnn##
 Vsiogddh="$(Xem https://github.com/revanced/revanced-patches/releases | grep -m1 '/revanced-patches/tree' | sed 's|v||g' | cut -d \" -f2)"
 Taive "https://github.com/revanced/revanced-patches/releases/download/v${Vsiogddh##*/}/revanced-patches-${Vsiogddh##*/}.jar" "$Likk/lib/revanced-patches.jar"       
 Vdbbd="$(Xem https://github.com/revanced/revanced-integrations/releases | grep -m1 '/revanced-integrations/tree' | sed 's|v||g' | cut -d \" -f2)"
-Taive "https://github.com/revanced/revanced-integrations/releases/download/v${Vdbbd##*/}/app-release-unsigned.apk" "$Likk/lib/revanced-integrations.apk"
+Taive "https://github.com/revanced/revanced-integrations/releases/download/v${Vdbbd##*/}/app-release-unsigned.apk" "$Likk/lib/revanced-integrations.apk"       
 
 ls $Likk/lib
+echo
+file $Likk/lib/revanced-cli.jar
+file $Likk/lib/revanced-patches.jar
+file $Likk/lib/revanced-integrations.apk
 
 # Tải Youtube
 Vidon="$(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions | grep -m1 general-ads | tr ',' '\n' | tac | head -n 1 | awk '{print $1}')"
 [ "$VERSION" == "Default" ] && VERSION="$Vidon"
 echo "VS=$Vidon" >> $GITHUB_ENV
+
+echo "
+$(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions | grep -m1 general-ads)"
 
 Taiyt () {
 Upk="https://www.apkmirror.com"
@@ -84,6 +91,9 @@ echo "
 "
 exit 0
 fi
+
+echo
+file $Likk/lib/YouTube.apk
 
 if [ "$DEVICE" == "arm64-v8a" ];then
 lib="lib/x86/* lib/x86_64/* lib/armeabi-v7a/*"
@@ -111,7 +121,7 @@ unzip -qo "$Likk/lib/YouTube.apk" "lib/$DEVICE/*" -d $Likk/Tav
 [ "$CREATE" == 'true' ] && echo -n "-e disable-create-button " >> $Likk/logk
 [ "$TYPE" != 'true' ] && lib='lib/*/*'
 
-zip -qr "$Likk/lib/YouTube.apk" -d $lib
+zip -qr $Likk/lib/YouTube.apk -d $lib
 
 if [ "$AMOLED" == 'true' ];then
 echo -n "-e theme " >> $Likk/logk
