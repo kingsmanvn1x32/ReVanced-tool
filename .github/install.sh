@@ -59,7 +59,7 @@ Taive "https://github.com/revanced/revanced-cli/releases/download/v${Vsionnnnn##
 Vsiogddh="$(Xem https://github.com/revanced/revanced-patches/releases | grep -m1 '/revanced-patches/tree' | sed 's|v||g' | cut -d \" -f2)"
 Taive "https://github.com/revanced/revanced-patches/releases/download/v${Vsiogddh##*/}/revanced-patches-${Vsiogddh##*/}.jar" "$Likk/lib/revanced-patches.jar"       
 Vdbbd="$(Xem https://github.com/revanced/revanced-integrations/releases | grep -m1 '/revanced-integrations/tree' | sed 's|v||g' | cut -d \" -f2)"
-Taive "https://github.com/revanced/revanced-integrations/releases/download/v${Vdbbd##*/}/app-release-unsigned.apk" "$Likk/lib/revanced-integrations.apk"       
+Taive "https://github.com/revanced/revanced-integrations/releases/download/v${Vdbbd##*/}/app-release-unsigned.apk" "$Likk/lib/revanced-integrations.apk"
 
 ls $Likk/lib
 echo
