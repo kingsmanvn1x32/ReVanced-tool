@@ -53,7 +53,7 @@ done
 echo "- Download cli tool...
 "
 
-# Tải tool Revanced
+# Tai tool Revanced
 Vsionnnnn="$(Xem https://github.com/revanced/revanced-cli/releases | grep -m1 '/revanced-cli/tree' | sed 's|v||g' | cut -d \" -f2)"
 Taive "https://github.com/revanced/revanced-cli/releases/download/v${Vsionnnnn##*/}/revanced-cli-${Vsionnnnn##*/}-all.jar" "$Likk/lib/revanced-cli.jar"       
 Vsiogddh="$(Xem https://github.com/revanced/revanced-patches/releases | grep -m1 '/revanced-patches/tree' | sed 's|v||g' | cut -d \" -f2)"
@@ -67,7 +67,7 @@ file $Likk/lib/revanced-cli.jar
 file $Likk/lib/revanced-patches.jar
 file $Likk/lib/revanced-integrations.apk
 
-# Tải Youtube
+# Tai Youtube
 Vidon="$(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions | grep -m1 general-ads | tr ',' '\n' | tac | head -n 1 | awk '{print $1}')"
 [ "$VERSION" == "Default" ] && VERSION="$Vidon"
 echo "VS=$Vidon" >> $GITHUB_ENV
@@ -87,7 +87,7 @@ echo "
 Taiyt 'YouTube.apk' '-2'
 if [ ! -e $Likk/lib/YouTube.apk ];then
 echo "
-- Lỗi tải Youtube.apk
+- Loi tai Youtube.apk
 "
 exit 0
 fi
@@ -138,7 +138,7 @@ version='$VERSION'
 versionCode='${VERSION//./}'
 updateJson=https://github.com/'$GITHUB_REPOSITORY'/releases/download/Up/Up-'$ach$amoled2'.json' >> $Likk/Module/module.prop
 
-# Xử lý revanced patches
+# Xu ly revanced patches
 if [ "$Vidon" != "$VERSION" ];then
 unzip -qo "$Likk/lib/revanced-patches.jar" -d $Likk/Pak
 for vak in $(grep -Rl "$Vidon" $Likk/Pak); do
@@ -149,7 +149,7 @@ cd $Likk/Pak
 zip -qr "$Likk/lib/revanced-patches.jar" *
 fi
 
-# Xây dựng 
+# Xay dung 
 echo "
 - Build...
 "
