@@ -63,9 +63,9 @@ jobs:
           token: ${{ secrets.TELEGRAM_TOKEN }}
           format: markdown
           message: |
-            **Revanced Youtube magisk**
+            **ReVanced Youtube magisk**
             
-            *RELEASE*
+            *NEW RELEASE*
             
             ${{ steps.pyscript.outputs.stdout }}
             
