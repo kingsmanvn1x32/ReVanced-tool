@@ -61,12 +61,17 @@
 **Support**
 ---
 
+- [Channel Telegram](https://t.me/revanced_kingsmanvn)
+
 - You should support the revanced development team for making a great tool.
 
 - I'm just the author of this github automation tool.
+
   > [Donate Website](https://kingsmanvn.cf)
 
   > [Paypal](http://paypal.me/kingsmanvn)
+
+  > [Buy me a coffee ☕](https://www.buymeacoffee.com/kingsmanvn)
 
   > **99966889999999 - MB Bank**
 
