@@ -34,9 +34,9 @@
   "published_at": "2022-11-15T06:13:00Z",
   "assets": [
     {
-      "url": "https://api.github.com/repos/Kingsmanvn-Official/Revanced-tool/releases/assets/85165672",
-      "id": 85165672,
-      "node_id": "RA_kwDOICdUDM4FE4Zo",
+      "url": "https://api.github.com/repos/Kingsmanvn-Official/Revanced-tool/releases/assets/85279298",
+      "id": 85279298,
+      "node_id": "RA_kwDOICdUDM4FFUJC",
       "name": "YT-Magisk-17.43.36-arm64.Amoled.Zip",
       "label": "",
       "uploader": {
@@ -61,16 +61,16 @@
       },
       "content_type": "binary/octet-stream",
       "state": "uploaded",
-      "size": 58270016,
+      "size": 58187565,
       "download_count": 0,
-      "created_at": "2022-11-19T00:46:11Z",
-      "updated_at": "2022-11-19T00:46:14Z",
+      "created_at": "2022-11-20T07:07:50Z",
+      "updated_at": "2022-11-20T07:07:52Z",
       "browser_download_url": "https://github.com/Kingsmanvn-Official/Revanced-tool/releases/download/100/YT-Magisk-17.43.36-arm64.Amoled.Zip"
     },
     {
-      "url": "https://api.github.com/repos/Kingsmanvn-Official/Revanced-tool/releases/assets/85165680",
-      "id": 85165680,
-      "node_id": "RA_kwDOICdUDM4FE4Zw",
+      "url": "https://api.github.com/repos/Kingsmanvn-Official/Revanced-tool/releases/assets/85279294",
+      "id": 85279294,
+      "node_id": "RA_kwDOICdUDM4FFUI-",
       "name": "YT-Magisk-17.43.36-arm64.Zip",
       "label": "",
       "uploader": {
@@ -95,16 +95,16 @@
       },
       "content_type": "binary/octet-stream",
       "state": "uploaded",
-      "size": 58314496,
+      "size": 58196014,
       "download_count": 0,
-      "created_at": "2022-11-19T00:46:28Z",
-      "updated_at": "2022-11-19T00:46:31Z",
+      "created_at": "2022-11-20T07:07:44Z",
+      "updated_at": "2022-11-20T07:07:46Z",
       "browser_download_url": "https://github.com/Kingsmanvn-Official/Revanced-tool/releases/download/100/YT-Magisk-17.43.36-arm64.Zip"
     },
     {
-      "url": "https://api.github.com/repos/Kingsmanvn-Official/Revanced-tool/releases/assets/85165555",
-      "id": 85165555,
-      "node_id": "RA_kwDOICdUDM4FE4Xz",
+      "url": "https://api.github.com/repos/Kingsmanvn-Official/Revanced-tool/releases/assets/85279316",
+      "id": 85279316,
+      "node_id": "RA_kwDOICdUDM4FFUJU",
       "name": "YT-NoRoot-17.43.36-arm64.Amoled.apk",
       "label": "",
       "uploader": {
@@ -129,16 +129,16 @@
       },
       "content_type": "application/vnd.android.package-archive",
       "state": "uploaded",
-      "size": 79460615,
+      "size": 79374599,
       "download_count": 0,
-      "created_at": "2022-11-19T00:44:13Z",
-      "updated_at": "2022-11-19T00:44:15Z",
+      "created_at": "2022-11-20T07:08:21Z",
+      "updated_at": "2022-11-20T07:08:23Z",
       "browser_download_url": "https://github.com/Kingsmanvn-Official/Revanced-tool/releases/download/100/YT-NoRoot-17.43.36-arm64.Amoled.apk"
     },
     {
-      "url": "https://api.github.com/repos/Kingsmanvn-Official/Revanced-tool/releases/assets/85165606",
-      "id": 85165606,
-      "node_id": "RA_kwDOICdUDM4FE4Ym",
+      "url": "https://api.github.com/repos/Kingsmanvn-Official/Revanced-tool/releases/assets/85279436",
+      "id": 85279436,
+      "node_id": "RA_kwDOICdUDM4FFULM",
       "name": "YT-NoRoot-17.43.36-arm64.apk",
       "label": "",
       "uploader": {
@@ -163,10 +163,10 @@
       },
       "content_type": "application/vnd.android.package-archive",
       "state": "uploaded",
-      "size": 79386887,
+      "size": 79218951,
       "download_count": 0,
-      "created_at": "2022-11-19T00:45:12Z",
-      "updated_at": "2022-11-19T00:45:17Z",
+      "created_at": "2022-11-20T07:09:36Z",
+      "updated_at": "2022-11-20T07:09:38Z",
       "browser_download_url": "https://github.com/Kingsmanvn-Official/Revanced-tool/releases/download/100/YT-NoRoot-17.43.36-arm64.apk"
     }
   ],
