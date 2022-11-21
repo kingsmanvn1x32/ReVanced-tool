@@ -3,9 +3,9 @@ on:
   workflow_call:
     secrets:
       TELEGRAM_TO:
-        required: true
+        required: false
       TELEGRAM_TOKEN:
-        required: true
+        required: false
   workflow_dispatch:
     inputs:
       VERSION:
@@ -356,4 +356,3 @@ jobs:
     secrets:
       TELEGRAM_TO: ${{ secrets.TELEGRAM_TO }}
       TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
-
