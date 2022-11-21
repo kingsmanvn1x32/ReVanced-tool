@@ -1,4 +1,4 @@
-name: Revanced build
+name: ReVanced build
 on:
   workflow_call:
     secrets:
