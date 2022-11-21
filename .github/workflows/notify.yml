@@ -65,7 +65,7 @@ jobs:
             for asset in release['assets'][::-1]:
                 file_name = asset['name']
                 file_url = asset['browser_download_url']
-                if '.zip' in file_name:
+                if '.Zip' in file_name:
                   root_files.append(f"🔗 [{file_name}]({file_url})")
                 else:
                   nonroot_files.append(f"🔗 [{file_name}]({file_url})")
@@ -97,7 +97,7 @@ jobs:
               ➜ `mindetach.zip` is used to detach play store updates for YouTube and YouTube Music for rooted users.
               ➜ Use [MicroG APK](https://github.com/inotia00/VancedMicroG/releases/latest/download/microg.apk) for non root YouTube and YouTube Music.
 
-            Github: [ReVanced YouTube magisk](https://github.com/Kingsmanvn-Official/Revanced-tool)
+            Github: [ReVanced YouTube magisk repo](https://github.com/Kingsmanvn-Official/Revanced-tool)
 
             [Donate Website](https://kingsmanvn.cf)
             [Paypal](http://paypal.me/kingsmanvn)

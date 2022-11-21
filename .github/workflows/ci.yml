@@ -36,7 +36,7 @@ jobs:
           }
 
           is_cli_latest() {
-            declare -r last_cli_url=$(req https://api.github.com/repos/Kingsmanvn-Official/revanced-cli/releases/latest - | json_get 'browser_download_url')
+            declare -r last_cli_url=$(req https://api.github.com/repos/revanced/revanced-cli/releases/latest - | json_get 'browser_download_url')
             declare -r last_cli=${last_cli_url##*/}
             cur_cli=$(sed -n 's/.*CLI: \(.*\)/\1/p' build.md | xargs)
             echo "current integrations version: $cur_cli"
