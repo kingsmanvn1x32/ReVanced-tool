@@ -102,22 +102,9 @@ jobs:
           fi
           . .github/install.sh
 
-      - name: Get build log
-        id: get_output
-        run: |
-          bash ./buildlog.sh
-          echo -e "\nYouTube version: ${{ env.VS }}" >>build.log
-          echo -e "\nUse [MicroG APK](https://github.com/inotia00/VancedMicroG/releases/latest/download/microg.apk) for YouTube and Music" >>build.log
-          echo -e "\n[Revanced-tool repo]($GITHUB_SERVER_URL/${{ github.repository }})" >>build.log
-          BUILD_LOG=$(cat build.log)
-          echo "BUILD_LOG<<EOF" >> $GITHUB_ENV
-          echo "$BUILD_LOG" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
-
       - name: Upload to release
         uses: svenstaro/upload-release-action@v2
         with:
-          body: ${{ env.BUILD_LOG }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: Up/*
           release_name: Revanced-v${{ env.VS }}
@@ -170,22 +157,9 @@ jobs:
           prerelease: true
           overwrite: true
 
-      - name: Get build log
-        id: get_output
-        run: |
-          bash ./buildlog.sh
-          echo -e "\nYouTube version: ${{ env.VS }}" >>build.log
-          echo -e "\nUse [MicroG APK](https://github.com/inotia00/VancedMicroG/releases/latest/download/microg.apk) for YouTube and Music" >>build.log
-          echo -e "\n[Revanced-tool repo]($GITHUB_SERVER_URL/${{ github.repository }})" >>build.log
-          BUILD_LOG=$(cat build.log)
-          echo "BUILD_LOG<<EOF" >> $GITHUB_ENV
-          echo "$BUILD_LOG" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
-
       - name: Upload to release
         uses: svenstaro/upload-release-action@v2
         with:
-          body: ${{ env.BUILD_LOG }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: Up/*
           release_name: Revanced-v${{ env.VS }}
@@ -232,18 +206,20 @@ jobs:
         id: get_output
         run: |
           bash ./buildlog.sh
-          echo -e "\nYouTube version: ${{ env.VS }}" >>build.log
-          echo -e "\nUse [MicroG APK](https://github.com/inotia00/VancedMicroG/releases/latest/download/microg.apk) for YouTube and Music" >>build.log
-          echo -e "\n[Revanced-tool repo]($GITHUB_SERVER_URL/${{ github.repository }})" >>build.log
-          BUILD_LOG=$(cat build.log)
-          echo "BUILD_LOG<<EOF" >> $GITHUB_ENV
-          echo "$BUILD_LOG" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
+          echo -e "\nYouTube version: ${{ env.VS }}" >>build.md
+          echo -e "\nUse [MicroG APK](https://github.com/inotia00/VancedMicroG/releases/latest/download/microg.apk) for YouTube and Music" >>build.md
+          echo -e "\n[Revanced-tool repo]($GITHUB_SERVER_URL/${{ github.repository }})" >>build.md
+       
+          DELIM="$(openssl rand -hex 8)"
+          echo "BUILD_LOG<<${DELIM}" >> "$GITHUB_OUTPUT"
+          cat build.md >> "$GITHUB_OUTPUT"
+          echo "${DELIM}" >> "$GITHUB_OUTPUT"
+          cp -f build.md build.tmp
 
       - name: Upload to release
         uses: svenstaro/upload-release-action@v2
         with:
-          body: ${{ env.BUILD_LOG }}
+          body: ${{ steps.get_output.outputs.BUILD_LOG }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: Up/*
           release_name: Revanced-v${{ env.VS }}
@@ -257,14 +233,14 @@ jobs:
       - name: Update changelog
         id: update_config
         run: |
-          cp -f build.log latest_build.md
-          CHANGELOG_URL="https://raw.githubusercontent.com/${{ github.repository }}/update/latest_build.md"
+          cp -f build.tmp build.md
+          CHANGELOG_URL="https://raw.githubusercontent.com/${{ github.repository }}/update/build.md"
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           branch: update
           skip_checkout: true
-          file_pattern: latest_build.md
+          file_pattern: build.md
           commit_message: Bump version ${{ needs.get_next_version_code.outputs.NEXT_VER }}
           push_options: '-f -u'
 
@@ -313,22 +289,9 @@ jobs:
           prerelease: true
           overwrite: true
 
-      - name: Get build log
-        id: get_output
-        run: |
-          bash ./buildlog.sh
-          echo -e "\nYouTube version: ${{ env.VS }}" >>build.log
-          echo -e "\nUse [MicroG APK](https://github.com/inotia00/VancedMicroG/releases/latest/download/microg.apk) for YouTube and Music" >>build.log
-          echo -e "\n[Revanced-tool repo]($GITHUB_SERVER_URL/${{ github.repository }})" >>build.log
-          BUILD_LOG=$(cat build.log)
-          echo "BUILD_LOG<<EOF" >> $GITHUB_ENV
-          echo "$BUILD_LOG" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
-
       - name: Upload to release
         uses: svenstaro/upload-release-action@v2
         with:
-          body: ${{ env.BUILD_LOG }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: Up/*
           release_name: Revanced-v${{ env.VS }}
