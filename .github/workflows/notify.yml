@@ -28,7 +28,7 @@ jobs:
           
       - name: Get current date
         id: date
-        run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+        run: echo "Date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
           
       - name: Push release.json
         uses: stefanzweifel/git-auto-commit-action@v4.15.4
@@ -47,10 +47,14 @@ jobs:
         with:
           script: |
             import json
+            import re
+
             # Read release.json file
             with open('release.json', 'r') as f:
                 release = json.load(f)
-            print("Date: "+release['body'], end="\n\n")
+
+            print(re.findall(r"CLI:[a-zA-Z-.\s0-9:]+\n", release['body'])[0] or "")
+
             print("*📦 Downloads*")
             # Collect browser_download_url from assets in release
             for asset in release['assets'][::-1]:
@@ -63,9 +67,11 @@ jobs:
           token: ${{ secrets.TELEGRAM_TOKEN }}
           format: markdown
           message: |
-            **ReVanced Youtube magisk**
+            **ReVanced YouTube magisk**
             
             *NEW RELEASE*
+
+            Date: ${{ steps.date.outputs.Date }}
             
             ${{ steps.pyscript.outputs.stdout }}
             
