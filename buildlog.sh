@@ -4,7 +4,7 @@ set -eu -o pipefail
 
 source get_buildlog.sh
 
->build.log
+>build.md
 log "$(date +'%Y-%m-%d')\n"
 mkdir -p "$BUILD_DIR" "$TEMP_DIR"
 
