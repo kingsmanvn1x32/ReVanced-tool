@@ -74,7 +74,11 @@ jobs:
             Date: ${{ steps.date.outputs.Date }}
             
             ${{ steps.pyscript.outputs.stdout }}
-            
+
+            *≣ Note:*
+              ➜ `mindetach.zip` is used to detach play store updates for YouTube and YouTube Music for rooted users.
+              ➜ Use [MicroG APK](https://github.com/inotia00/VancedMicroG/releases/latest/download/microg.apk) for non root YouTube and YouTube Music.
+
             Github: [ReVanced YouTube magisk](https://github.com/Kingsmanvn-Official/Revanced-tool)
 
             [Donate Website](https://kingsmanvn.cf)
