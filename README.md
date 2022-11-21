@@ -1,6 +1,6 @@
-# Revanced-tool (Việt hoá)
+# ReVanced-tool (Việt hoá)
 [![License](https://img.shields.io/github/license/Kingsmanvn-Official/Revanced-tool?style=flat-square)](https://github.com/Kingsmanvn-Official/revanced-tool/blob/master/LICENSE)
-[![Revanced build](https://github.com/Kingsmanvn-Official/Revanced-tool/actions/workflows/build.yml/badge.svg)](https://github.com/Kingsmanvn-Official/Revanced-tool/actions/workflows/build.yml)
+[![ReCanced build](https://github.com/Kingsmanvn-Official/Revanced-tool/actions/workflows/build.yml/badge.svg)](https://github.com/Kingsmanvn-Official/Revanced-tool/actions/workflows/build.yml)
 [![CI](https://github.com/Kingsmanvn-Official/Revanced-tool/actions/workflows/ci.yml/badge.svg?event=schedule)](https://github.com/Kingsmanvn-Official/Revanced-tool/actions/workflows/ci.yml)
 [![Latest release](https://img.shields.io/github/v/release/Kingsmanvn-Official/revanced-tool?style=flat-square)](https://github.com/Kingsmanvn-Official/revanced-tool/releases/latest)
 [![Image of github-profile-views-counter](https://github.com/Kingsmanvn-Official/github-profile-views-counter/blob/master/svg/539448332/badge.svg)](https://github.com/Kingsmanvn-Official/github-profile-views-counter/blob/master/readme/539448332/week.md)
