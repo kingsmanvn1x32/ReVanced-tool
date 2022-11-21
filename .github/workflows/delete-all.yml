@@ -2,25 +2,16 @@ name: GitHub Cleanup
 
 on:
   workflow_call:
+    secrets:
+      GH_TOKEN:
+        required: true
   workflow_dispatch:
   schedule:
     - cron: '* * 1 * *'
 
 jobs:
-  delete:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Delete Older Releases
-        uses: dev-drprasad/delete-older-releases@v0.2.0
-        with:
-          keep_latest: 3
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Delete workflow runs
-        uses: Mattraks/delete-workflow-runs@v2
-        with:
-          token: ${{ github.token }}
-          repository: ${{ github.repository }}
-          retain_days: 1
-          keep_minimum_runs: 0
+  cleanup:
+    name: GitHub Cleanup
+    uses: nikhilbadyal/ghactions/.github/workflows/github-cleanup.yml@main
+    secrets:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
