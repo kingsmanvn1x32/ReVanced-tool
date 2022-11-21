@@ -4,9 +4,9 @@ on:
   workflow_call:
     secrets:
       TELEGRAM_TO:
-        required: true
+        required: false
       TELEGRAM_TOKEN:
-        required: true
+        required: false
   workflow_dispatch:
 
 jobs:
@@ -57,8 +57,26 @@ jobs:
 
             print("*📦 Downloads*")
             # Collect browser_download_url from assets in release
+            # for asset in release['assets'][::-1]:
+                # print(f"🔗 [{asset['name']}]({asset['browser_download_url']})")
+            nonroot_files = []
+            root_files = []
+            
             for asset in release['assets'][::-1]:
-                print(f"🔗 [{asset['name']}]({asset['browser_download_url']})")
+                file_name = asset['name']
+                file_url = asset['browser_download_url']
+                if '.zip' in file_name:
+                  root_files.append(f"🔗 [{file_name}]({file_url})")
+                else:
+                  nonroot_files.append(f"🔗 [{file_name}]({file_url})")
+                  
+            print("Non-Root:")
+            print("\n".join(nonroot_files))
+            
+            print()
+            
+            print("Magisk (Root):")
+            print("\n".join(root_files))
 
       - name: Telegram Channel Update
         uses: appleboy/telegram-action@v0.1.1
