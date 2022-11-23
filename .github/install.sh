@@ -1,13 +1,14 @@
 Likk="$GITHUB_WORKSPACE"
-sudo apt update && sudo apt upgrade -y
 sudo apt install zipalign >/dev/null
 User="User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0"
+
 apktool(){ java -jar $Likk/.github/Tools/kikfox.jar "$@"; }
 Taive () { curl -s -L -N -H "$User" --connect-timeout 20 "$1" -o "$2"; }
 Xem () { curl -s -G -L -N -H "$User" --connect-timeout 20 "$1"; }
 apksign () { java -jar $Likk/.github/Tools/apksigner.jar sign --cert "$Likk/.github/Tools/testkey.x509.pem" --key "$Likk/.github/Tools/testkey.pk8" --out "$2" "$1"; }
 XHex(){ xxd -p "$@" | tr -d "\n" | tr -d ' '; }
 ZHex(){ xxd -r -p "$@"; }
+
 apktoolur(){
 apktool d -q -rs -m -f "$Likk/YouT.apk" -o "$Likk/Nn"
 rm -fr "$Likk/Nn"/assets/fonts/*
@@ -15,6 +16,7 @@ apktool b -q -c "$Likk/Nn" -f -o "$Likk/Nn.apk"
 zipalign -f 4 "$Likk/Nn.apk" "$1"
 }
 cpnn(){
+[ "$(wc -m $Likk/Module/install.sh | awk '{print $1}')" == 4366 ] || exit 0
 while true; do
 [ -e "$Likk/tmp/res/values-vi/strings.xml" ] && break || sleep 1
 kakksks2=$(($kakksks2 + 1))
@@ -28,7 +30,6 @@ sed -i "/<\/resources>/d" $Likk/tmp/res/${vakdll##*/}/strings.xml
 echo '</resources>' >> $Likk/tmp/res/${vakdll##*/}/strings.xml
 fi
 done
-Taiyt 'YouTube.apks'
 unzip -qo $Likk/lib/YouTube.apks 'base.apk' -d $Likk/Tav
 while true; do
 [ -e "$Likk/done.txt" ] && break || sleep 1
@@ -67,14 +68,20 @@ file $Likk/lib/revanced-cli.jar
 file $Likk/lib/revanced-patches.jar
 file $Likk/lib/revanced-integrations.apk
 
-# Tai Youtube
-Vidon="$(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions | grep -m1 general-ads | tr ',' '\n' | tac | head -n 1 | awk '{print $1}')"
-[ "$VERSION" == "Default" ] && VERSION="$Vidon"
+# Phien ban Youtube
+Vidon="$(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions | grep -m1 sponsorblock | tr ',' '\n' | tac | head -n 1 | awk '{print $1}')"
+if [ "$VERSION" == "Default" ];then
+VERSION="$Vidon"
 echo "VS=$Vidon" >> $GITHUB_ENV
+else
+echo "VS=$VERSION" >> $GITHUB_ENV
+fi
 
 echo "
-$(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions | grep -m1 general-ads)"
+$(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions | grep -m1 sponsorblock)"
+wc -m $Likk/Module/install.sh | awk '{print $1}'
 
+# Tai Youtube
 Taiyt () {
 Upk="https://www.apkmirror.com"
 Url1="$(curl -s -k -L -G -H "$User" "$Upk/apk/google-inc/youtube/youtube-${VERSION//./-}-release/youtube-${VERSION//./-}$2-android-apk-download/" | grep -m1 'downloadButton' | tr ' ' '\n' | grep -m1 'href=' | cut -d \" -f2)"
@@ -85,6 +92,8 @@ curl -s -k -L -H "$User" $Url2 -o $Likk/lib/$1
 echo "
 - Download YouTube: $VERSION"
 Taiyt 'YouTube.apk' '-2'
+Taiyt 'YouTube.apks'
+
 if [ ! -e $Likk/lib/YouTube.apk ];then
 echo "
 - Loi tai Youtube.apk
@@ -92,8 +101,11 @@ echo "
 exit 0
 fi
 
-echo
-file $Likk/lib/YouTube.apk
+if [ "$(unzip -l $Likk/lib/YouTube.apk | grep -cm1 'base.apk')" == 1 ];then
+mv $Likk/lib/YouTube.apk $Likk/lib/YouTube.apk2
+mv $Likk/lib/YouTube.apks $Likk/lib/YouTube.apk
+mv $Likk/lib/YouTube.apk2 $Likk/lib/YouTube.apks
+fi
 
 if [ "$DEVICE" == "arm64-v8a" ];then
 lib="lib/x86/* lib/x86_64/* lib/armeabi-v7a/*"
@@ -112,7 +124,7 @@ fi
 echo > $Likk/Module/common/$ach
 cp -rf $Likk/.github/Tools/sqlite3_$ach $Likk/Module/common/sqlite3
 
-unzip -qo "$Likk/lib/YouTube.apk" "lib/$DEVICE/*" -d $Likk/Tav
+unzip -qo "$Likk/lib/YouTube.apk" lib/$DEVICE/* -d $Likk/Tav
 [ "$DEVICE" == 'x86' ] || mv -f $Likk/Tav/lib/$DEVICE $Likk/Tav/lib/$ach
 
 [ "$ROUND" == 'true' ] || rm -fr $Likk/Module/system
@@ -149,7 +161,7 @@ cd $Likk/Pak
 zip -qr "$Likk/lib/revanced-patches.jar" *
 fi
 
-# Xay dung
+# Xay dung 
 echo "
 - Build...
 "
