@@ -1,12 +1,12 @@
-2022-11-25
+2022-11-26
   
 CLI: revanced-cli-2.16.1-all.jar  
 Integrations: app-release-unsigned-v0.78.0.apk  
-Patches: revanced-patches-2.122.0.jar  
+Patches: revanced-patches-2.125.0.jar  
 
-### [2.122.0](https://github.com/revanced/revanced-patches/compare/v2.121.0...v2.122.0) (2022-11-25)
+### [2.125.0](https://github.com/revanced/revanced-patches/compare/v2.124.0...v2.125.0) (2022-11-26)
 ### Features
-* **tiktok:** `sim-spoof` patch ([#1088](https://github.com/revanced/revanced-patches/issues/1088)) ([53bb547](https://github.com/revanced/revanced-patches/commit/53bb547cc1003859f1d42db819a897e120b17fbe))
+* **myexpenses:** `unlock-pro` patch ([#1120](https://github.com/revanced/revanced-patches/issues/1120)) ([e1a327a](https://github.com/revanced/revanced-patches/commit/e1a327a15d4289d9708546cc40f423597f22a66d))
 
   
 
