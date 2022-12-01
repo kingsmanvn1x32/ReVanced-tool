@@ -1,7 +1,7 @@
-2022-11-30
+2022-12-01
   
 CLI: revanced-cli-2.16.1-all.jar  
-Integrations: app-release-unsigned-v0.79.0.apk  
+Integrations: app-release-unsigned-v0.80.0.apk  
 Patches: revanced-patches-2.131.0.jar  
 
 ### [2.131.0](https://github.com/revanced/revanced-patches/compare/v2.130.0...v2.131.0) (2022-11-30)
