@@ -54,21 +54,19 @@ done
 echo "- Download cli tool...
 "
 
-# Tai tool Revanced
-Vsionnnnn="$(Xem https://github.com/revanced/revanced-cli/releases | grep -m1 '/revanced-cli/tree' | sed 's|v||g' | cut -d \" -f2)"
-Taive "https://github.com/revanced/revanced-cli/releases/download/v${Vsionnnnn##*/}/revanced-cli-${Vsionnnnn##*/}-all.jar" "$Likk/lib/revanced-cli.jar"
-Vsiogddh="$(Xem https://github.com/revanced/revanced-patches/releases | grep -m1 '/revanced-patches/tree' | sed 's|v||g' | cut -d \" -f2)"
-Taive "https://github.com/revanced/revanced-patches/releases/download/v${Vsiogddh##*/}/revanced-patches-${Vsiogddh##*/}.jar" "$Likk/lib/revanced-patches.jar"
-Vdbbd="$(Xem https://github.com/revanced/revanced-integrations/releases | grep -m1 '/revanced-integrations/tree' | sed 's|v||g' | cut -d \" -f2)"
-Taive "https://github.com/revanced/revanced-integrations/releases/download/v${Vdbbd##*/}/app-release-unsigned.apk" "$Likk/lib/revanced-integrations.apk"
+# Tải tool Revanced
+Vsionnnnn="$(Xem https://github.com/revanced/revanced-cli | grep -m1 'revanced/revanced-cli/releases/tag' | sed 's|v||g' | tr "/" "\n" | grep -m1 '\">' | cut -d \" -f1)"
+Taive "https://github.com/revanced/revanced-cli/releases/download/v${Vsionnnnn##*/}/revanced-cli-${Vsionnnnn##*/}-all.jar" "$Likk/lib/revanced-cli.jar"       
+Vsiogddh="$(Xem https://github.com/revanced/revanced-patches | grep -m1 'revanced/revanced-patches/releases/tag' | sed 's|v||g' | tr "/" "\n" | grep -m1 '\">' | cut -d \" -f1)"
+Taive "https://github.com/revanced/revanced-patches/releases/download/v${Vsiogddh##*/}/revanced-patches-${Vsiogddh##*/}.jar" "$Likk/lib/revanced-patches.jar"       
+Vdbbd="$(Xem https://github.com/revanced/revanced-integrations | grep -m1 'revanced/revanced-integrations/releases/tag' | sed 's|v||g' | tr "/" "\n" | grep -m1 '\">' | cut -d \" -f1)"
+Taive "https://github.com/revanced/revanced-integrations/releases/download/v${Vdbbd##*/}/app-release-unsigned.apk" "$Likk/lib/revanced-integrations.apk"       
 
-ls $Likk/lib
-echo
-file $Likk/lib/revanced-cli.jar
-file $Likk/lib/revanced-patches.jar
-file $Likk/lib/revanced-integrations.apk
+[ "$(file $Likk/lib/revanced-cli.jar | grep -cm1 "Zip archive")" == 1 ] && echo "Download successfully: revanced-cli.jar" || echo "Download failed: revanced-cli.jar"
+[ "$(file $Likk/lib/revanced-patches.jar | grep -cm1 "Zip archive")" == 1 ] && echo "Download successfully: revanced-patches.jar" || echo "Download failed: revanced-patches.jar"
+[ "$(file $Likk/lib/revanced-integrations.apk | grep -cm1 "Zip archive")" == 1 ] && echo "Download successfully: revanced-integrations.apk" || echo "Download failed: revanced-integrations.apk"
 
-# Phien ban Youtube
+# Phiên bản Youtube
 Vidon="$(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions | grep -m1 sponsorblock | tr '	' '\n' | tac | head -n 1 | awk '{print $1}')"
 if [ "$VERSION" == "Default" ];then
 VERSION="$Vidon"
@@ -81,7 +79,7 @@ echo "
 $(java -jar $Likk/lib/revanced-cli.jar -a $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -l --with-versions | grep -m1 sponsorblock)"
 wc -m $Likk/Module/install.sh | awk '{print $1}'
 
-# Tai Youtube
+# Tải Youtube
 Taiyt () {
 Upk="https://www.apkmirror.com"
 Url1="$(curl -s -k -L -G -H "$User" "$Upk/apk/google-inc/youtube/youtube-${VERSION//./-}-release/youtube-${VERSION//./-}$2-android-apk-download/" | grep -m1 'downloadButton' | tr ' ' '\n' | grep -m1 'href=' | cut -d \" -f2)"
@@ -96,7 +94,7 @@ Taiyt 'YouTube.apks'
 
 if [ ! -e $Likk/lib/YouTube.apk ];then
 echo "
-- Loi tai Youtube.apk
+- Lỗi tải Youtube.apk
 "
 exit 0
 fi
@@ -150,7 +148,7 @@ version='$VERSION'
 versionCode='${VERSION//./}'
 updateJson=https://github.com/'$GITHUB_REPOSITORY'/releases/download/Up/Up-'$ach$amoled2'.json' >> $Likk/Module/module.prop
 
-# Xu ly revanced patches
+# Xử lý revanced patches
 if [ "$Vidon" != "$VERSION" ];then
 unzip -qo "$Likk/lib/revanced-patches.jar" -d $Likk/Pak
 for vak in $(grep -Rl "$Vidon" $Likk/Pak); do
@@ -161,7 +159,7 @@ cd $Likk/Pak
 zip -qr "$Likk/lib/revanced-patches.jar" *
 fi
 
-# Xay dung 
+# Xây dựng 
 echo "
 - Build...
 "
