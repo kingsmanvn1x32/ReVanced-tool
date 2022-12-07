@@ -53,10 +53,6 @@ jobs:
     outputs:
       NEXT_VER: ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
     steps:
-      - uses: actions/setup-java@v3
-        with:
-          distribution: "zulu"
-          java-version: "17"
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
@@ -68,11 +64,12 @@ jobs:
       - name: Get next version code
         id: next_ver_code
         run: |
+          echo "NEXT_VER_CODE=$(TZ='Asia/Ho_Chi_Minh' date +"%Y.%m.%d-%H.%M.%S")" >> $GITHUB_OUTPUT
           # TAG=$(git tag --sort=creatordate | tail -1)
           # fetch it from github
-          TAG=$(wget https://api.github.com/repos/$GITHUB_REPOSITORY/releases/latest -O- | tr -d ' ' | sed -n 's/.*"tag_name":"\(.*\)".*/\1/p')
-          if [ -z "$TAG" ]; then TAG=0; fi
-          echo "NEXT_VER_CODE=$((TAG + 1))" >> $GITHUB_OUTPUT
+          # TAG=$(wget https://api.github.com/repos/$GITHUB_REPOSITORY/releases/latest -O- | tr -d ' ' | sed -n 's/.*"tag_name":"\(.*\)".*/\1/p')
+          # if [ -z "$TAG" ]; then TAG=0; fi
+          # echo "NEXT_VER_CODE=$((TAG + 1))" >> $GITHUB_OUTPUT
 
   build1:
     name: 'NO ROOT...'
