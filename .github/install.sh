@@ -25,9 +25,14 @@ done
 sleep 2
 for vakdll in $Likk/Lang/*; do
 if [ -e $vakdll/strings.xml ];then
-cat $vakdll/strings.xml >> $Likk/tmp/res/${vakdll##*/}/strings.xml
+if [ -e $Likk/tmp/res/${vakdll##*/}/strings.xml ];then
+cat $vakdll/strings.xml | sed -e 's|<?xml version="1.0" encoding="utf-8"?>||g' -e "/<\/resources>/d" -e "/<resources>/d" >> $Likk/tmp/res/${vakdll##*/}/strings.xml
 sed -i "/<\/resources>/d" $Likk/tmp/res/${vakdll##*/}/strings.xml
 echo '</resources>' >> $Likk/tmp/res/${vakdll##*/}/strings.xml
+else
+mkdir -p $Likk/tmp/res/${vakdll##*/}
+cp -rf $vakdll $Likk/tmp/res
+fi
 fi
 done
 unzip -qo $Likk/lib/YouTube.apks 'base.apk' -d $Likk/Tav
@@ -60,7 +65,11 @@ Taive "https://github.com/revanced/revanced-cli/releases/download/v${Vsionnnnn##
 Vsiogddh="$(Xem https://github.com/revanced/revanced-patches | grep -m1 'revanced/revanced-patches/releases/tag' | sed 's|v||g' | tr "/" "\n" | grep -m1 '\">' | cut -d \" -f1)"
 Taive "https://github.com/revanced/revanced-patches/releases/download/v${Vsiogddh##*/}/revanced-patches-${Vsiogddh##*/}.jar" "$Likk/lib/revanced-patches.jar"       
 Vdbbd="$(Xem https://github.com/revanced/revanced-integrations | grep -m1 'revanced/revanced-integrations/releases/tag' | sed 's|v||g' | tr "/" "\n" | grep -m1 '\">' | cut -d \" -f1)"
-Taive "https://github.com/revanced/revanced-integrations/releases/download/v${Vdbbd##*/}/app-release-unsigned.apk" "$Likk/lib/revanced-integrations.apk"       
+Taive "https://github.com/revanced/revanced-integrations/releases/download/v${Vdbbd##*/}/revanced-integrations-${Vdbbd##*/}.apk" "$Likk/lib/revanced-integrations.apk"       
+
+if [ "$(file $Likk/lib/revanced-integrations.apk | grep -cm1 "Zip archive")" != 1 ];then
+Taive "https://github.com/revanced/revanced-integrations/releases/download/v0.91.1/revanced-integrations-0.91.0.apk" "$Likk/lib/revanced-integrations.apk"
+fi
 
 [ "$(file $Likk/lib/revanced-cli.jar | grep -cm1 "Zip archive")" == 1 ] && echo "Download successfully: revanced-cli.jar" || echo "Download failed: revanced-cli.jar"
 [ "$(file $Likk/lib/revanced-patches.jar | grep -cm1 "Zip archive")" == 1 ] && echo "Download successfully: revanced-patches.jar" || echo "Download failed: revanced-patches.jar"
@@ -178,7 +187,7 @@ echo '{
 }' > $Likk/Up-$ach$amoled2.json 
 echo > $Likk/done.txt ) & cpnn
 else
-( java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/YouT.apk" -t $Likk/tmp $(cat $Likk/logk) --mount
+( java -jar $Likk/lib/revanced-cli.jar -m $Likk/lib/revanced-integrations.apk -b $Likk/lib/revanced-patches.jar -a "$Likk/lib/YouTube.apk" -o "$Likk/YouT.apk" -t $Likk/tmp $(cat $Likk/logk)
 [ "$OPTIMIZATION" == 'true' ] && apktoolur "$Likk/apk/YouTube.apk" || zipalign -f 4 "$Likk/YouT.apk" "$Likk/apk/YouTube.apk"
 apksign "$Likk/apk/YouTube.apk" "$Likk/Up/YT-NoRoot-$VERSION-$ach$amoled2.apk" 
 echo > $Likk/done.txt ) & cpnn
@@ -186,3 +195,4 @@ fi
 
 echo "
 - Complete"
+
