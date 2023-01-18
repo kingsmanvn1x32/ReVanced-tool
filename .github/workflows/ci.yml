@@ -29,6 +29,7 @@ jobs:
               declare -r cur_yt=$(sed -n 's/.*YouTube: \(.*\)/\1/p' build.md | xargs)
               [ -z "$cur_yt" ] && return 1 # empty, fail=>dont build
               declare -r last_ver=$(get_apk_vers "https://www.apkmirror.com/uploads/?appcategory=youtube" | get_largest_ver)
+
               echo "current yt version: $cur_yt"
               echo "latest yt version: $last_ver"
               [ "$cur_yt" != "$last_ver" ] # test success=>build, fail=>dont build
@@ -41,6 +42,7 @@ jobs:
             declare -r last_cli_url=$(req https://api.github.com/repos/revanced/revanced-cli/releases/latest - | json_get 'browser_download_url')
             declare -r last_cli=${last_cli_url##*/}
             cur_cli=$(sed -n 's/.*CLI: \(.*\)/\1/p' build.md | xargs)
+
             echo "current integrations version: $cur_cli"
             echo "latest integrations version: $last_cli"
             [ "$cur_cli" != "$last_cli" ] # test success=>build, fail=>dont build
@@ -48,10 +50,10 @@ jobs:
 
           is_integrations_latest() {
             mkdir -p temp
-            last_integrations_url=$(req https://api.github.com/repos/revanced/revanced-integrations/releases/latest - | json_get 'browser_download_url')
-            last_integrations_apk=${last_integrations_url##*/}
-            last_integrations="${last_integrations_apk%.apk}-$(cut -d/ -f8 <<<"$last_integrations_url").apk"
+            declare -r last_integrations_url=$(req https://api.github.com/repos/revanced/revanced-integrations/releases/latest - | json_get 'browser_download_url')
+            declare -r last_integrations=${last_integrations_url##*/}
             cur_integrations=$(sed -n 's/.*Integrations: \(.*\)/\1/p' build.md | xargs)
+
             echo "current integrations version: $cur_integrations"
             echo "latest integrations version: $last_integrations"
             [ "$cur_integrations" != "$last_integrations" ] # test success=>build, fail=>dont build
@@ -61,6 +63,7 @@ jobs:
             declare -r last_patches_url=$(wget -nv -O- https://api.github.com/repos/revanced/revanced-patches/releases/latest | json_get 'browser_download_url' 'jar')
             declare -r last_patches=${last_patches_url##*/}
             cur_patches=$(sed -n 's/.*Patches: \(.*\)/\1/p' build.md | xargs)
+
             echo "current patches version: $cur_patches"
             echo "latest patches version: $last_patches"
             [ "$cur_patches" != "$last_patches" ] # test success=>build, fail=>dont build
