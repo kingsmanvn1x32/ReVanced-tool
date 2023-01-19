@@ -2,11 +2,6 @@ name: Notify Release on Telegram
 
 on:
   workflow_call:
-    secrets:
-      TELEGRAM_TO:
-        required: false
-      TELEGRAM_TOKEN:
-        required: false
   workflow_dispatch:
 
 jobs:
@@ -105,3 +100,4 @@ jobs:
             **99966889999999 - MB Bank**
 
             Thanks
+

@@ -1,11 +1,6 @@
 name: ReVanced build
 on:
   workflow_call:
-    secrets:
-      TELEGRAM_TO:
-        required: false
-      TELEGRAM_TOKEN:
-        required: false
   workflow_dispatch:
     inputs:
       VERSION:
@@ -355,6 +350,4 @@ jobs:
       - build3
       - build4
     uses: ./.github/workflows/notify.yml
-    secrets:
-      TELEGRAM_TO: ${{ secrets.TELEGRAM_TO }}
-      TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+    secrets: inherit
