@@ -1,4 +1,4 @@
-2023-02-14
+2023-02-15
   
 CLI: revanced-cli-2.20.0-all.jar  
 Integrations: revanced-integrations-0.97.0.apk  
