@@ -1,9 +1,9 @@
 {
-  "url": "https://api.github.com/repos/Kingsmanvn-Official/ReVanced-tool/releases/94028632",
-  "assets_url": "https://api.github.com/repos/Kingsmanvn-Official/ReVanced-tool/releases/94028632/assets",
-  "upload_url": "https://uploads.github.com/repos/Kingsmanvn-Official/ReVanced-tool/releases/94028632/assets{?name,label}",
-  "html_url": "https://github.com/Kingsmanvn-Official/ReVanced-tool/releases/tag/2023.03.01-11.19.50",
-  "id": 94028632,
+  "url": "https://api.github.com/repos/Kingsmanvn-Official/ReVanced-tool/releases/95329881",
+  "assets_url": "https://api.github.com/repos/Kingsmanvn-Official/ReVanced-tool/releases/95329881/assets",
+  "upload_url": "https://uploads.github.com/repos/Kingsmanvn-Official/ReVanced-tool/releases/95329881/assets{?name,label}",
+  "html_url": "https://github.com/Kingsmanvn-Official/ReVanced-tool/releases/tag/2023.03.13-05.13.44",
+  "id": 95329881,
   "author": {
     "login": "github-actions[bot]",
     "id": 41898282,
@@ -24,19 +24,19 @@
     "type": "Bot",
     "site_admin": false
   },
-  "node_id": "RE_kwDOICdUDM4FmsNY",
-  "tag_name": "2023.03.01-11.19.50",
+  "node_id": "RE_kwDOICdUDM4Frp5Z",
+  "tag_name": "2023.03.13-05.13.44",
   "target_commitish": "main",
   "name": "Revanced-v17.49.37,",
   "draft": false,
   "prerelease": false,
   "created_at": "2023-01-30T10:03:15Z",
-  "published_at": "2023-03-01T04:22:50Z",
+  "published_at": "2023-03-12T22:16:37Z",
   "assets": [
     {
-      "url": "https://api.github.com/repos/Kingsmanvn-Official/ReVanced-tool/releases/assets/97548639",
-      "id": 97548639,
-      "node_id": "RA_kwDOICdUDM4F0Hlf",
+      "url": "https://api.github.com/repos/Kingsmanvn-Official/ReVanced-tool/releases/assets/99115911",
+      "id": 99115911,
+      "node_id": "RA_kwDOICdUDM4F6GOH",
       "name": "YT-Magisk-17.49.37.-arm64.Amoled.Zip",
       "label": "",
       "uploader": {
@@ -61,16 +61,16 @@
       },
       "content_type": "binary/octet-stream",
       "state": "uploaded",
-      "size": 65372881,
+      "size": 65367349,
       "download_count": 0,
-      "created_at": "2023-03-01T04:23:27Z",
-      "updated_at": "2023-03-01T04:23:29Z",
-      "browser_download_url": "https://github.com/Kingsmanvn-Official/ReVanced-tool/releases/download/2023.03.01-11.19.50/YT-Magisk-17.49.37.-arm64.Amoled.Zip"
+      "created_at": "2023-03-12T22:17:48Z",
+      "updated_at": "2023-03-12T22:17:51Z",
+      "browser_download_url": "https://github.com/Kingsmanvn-Official/ReVanced-tool/releases/download/2023.03.13-05.13.44/YT-Magisk-17.49.37.-arm64.Amoled.Zip"
     },
     {
-      "url": "https://api.github.com/repos/Kingsmanvn-Official/ReVanced-tool/releases/assets/97548769",
-      "id": 97548769,
-      "node_id": "RA_kwDOICdUDM4F0Hnh",
+      "url": "https://api.github.com/repos/Kingsmanvn-Official/ReVanced-tool/releases/assets/99115917",
+      "id": 99115917,
+      "node_id": "RA_kwDOICdUDM4F6GON",
       "name": "YT-Magisk-17.49.37.-arm64.Zip",
       "label": "",
       "uploader": {
@@ -95,16 +95,16 @@
       },
       "content_type": "binary/octet-stream",
       "state": "uploaded",
-      "size": 65433274,
+      "size": 65349153,
       "download_count": 0,
-      "created_at": "2023-03-01T04:24:31Z",
-      "updated_at": "2023-03-01T04:24:34Z",
-      "browser_download_url": "https://github.com/Kingsmanvn-Official/ReVanced-tool/releases/download/2023.03.01-11.19.50/YT-Magisk-17.49.37.-arm64.Zip"
+      "created_at": "2023-03-12T22:17:53Z",
+      "updated_at": "2023-03-12T22:17:57Z",
+      "browser_download_url": "https://github.com/Kingsmanvn-Official/ReVanced-tool/releases/download/2023.03.13-05.13.44/YT-Magisk-17.49.37.-arm64.Zip"
     },
     {
-      "url": "https://api.github.com/repos/Kingsmanvn-Official/ReVanced-tool/releases/assets/97548641",
-      "id": 97548641,
-      "node_id": "RA_kwDOICdUDM4F0Hlh",
+      "url": "https://api.github.com/repos/Kingsmanvn-Official/ReVanced-tool/releases/assets/99115680",
+      "id": 99115680,
+      "node_id": "RA_kwDOICdUDM4F6GKg",
       "name": "YT-NoRoot-17.49.37.-arm64.Amoled.apk",
       "label": "",
       "uploader": {
@@ -129,16 +129,16 @@
       },
       "content_type": "application/vnd.android.package-archive",
       "state": "uploaded",
-      "size": 83331221,
+      "size": 83294357,
       "download_count": 0,
-      "created_at": "2023-03-01T04:23:28Z",
-      "updated_at": "2023-03-01T04:23:33Z",
-      "browser_download_url": "https://github.com/Kingsmanvn-Official/ReVanced-tool/releases/download/2023.03.01-11.19.50/YT-NoRoot-17.49.37.-arm64.Amoled.apk"
+      "created_at": "2023-03-12T22:16:38Z",
+      "updated_at": "2023-03-12T22:16:40Z",
+      "browser_download_url": "https://github.com/Kingsmanvn-Official/ReVanced-tool/releases/download/2023.03.13-05.13.44/YT-NoRoot-17.49.37.-arm64.Amoled.apk"
     },
     {
-      "url": "https://api.github.com/repos/Kingsmanvn-Official/ReVanced-tool/releases/assets/97548564",
-      "id": 97548564,
-      "node_id": "RA_kwDOICdUDM4F0HkU",
+      "url": "https://api.github.com/repos/Kingsmanvn-Official/ReVanced-tool/releases/assets/99115902",
+      "id": 99115902,
+      "node_id": "RA_kwDOICdUDM4F6GN-",
       "name": "YT-NoRoot-17.49.37.-arm64.apk",
       "label": "",
       "uploader": {
@@ -163,14 +163,14 @@
       },
       "content_type": "application/vnd.android.package-archive",
       "state": "uploaded",
-      "size": 83302549,
+      "size": 83286165,
       "download_count": 0,
-      "created_at": "2023-03-01T04:22:51Z",
-      "updated_at": "2023-03-01T04:22:53Z",
-      "browser_download_url": "https://github.com/Kingsmanvn-Official/ReVanced-tool/releases/download/2023.03.01-11.19.50/YT-NoRoot-17.49.37.-arm64.apk"
+      "created_at": "2023-03-12T22:17:35Z",
+      "updated_at": "2023-03-12T22:17:37Z",
+      "browser_download_url": "https://github.com/Kingsmanvn-Official/ReVanced-tool/releases/download/2023.03.13-05.13.44/YT-NoRoot-17.49.37.-arm64.apk"
     }
   ],
-  "tarball_url": "https://api.github.com/repos/Kingsmanvn-Official/ReVanced-tool/tarball/2023.03.01-11.19.50",
-  "zipball_url": "https://api.github.com/repos/Kingsmanvn-Official/ReVanced-tool/zipball/2023.03.01-11.19.50",
-  "body": "2023-03-01\n  \nCLI: revanced-cli-2.20.0-all.jar  \nIntegrations: revanced-integrations-0.99.0.apk  \nPatches: revanced-patches-2.164.0.jar  \n\n### [2.164.0](https://github.com/revanced/revanced-patches/compare/v2.163.0...v2.164.0) (2023-02-24)\n### Features\n* **photomath:** `unlock-plus` patch ([#1633](https://github.com/revanced/revanced-patches/issues/1633)) ([a673514](https://github.com/revanced/revanced-patches/commit/a673514f848e583513924a6a9b8cfbb56153cc3a))\n* **youtube/general-ads:** hide quick actions in fullscreen ([fff9670](https://github.com/revanced/revanced-patches/commit/fff9670a81108b8343d0b7913953fc6c2bb4a6f0))\n* **youtube/general-ads:** hide related videos in quick action ([d23c31a](https://github.com/revanced/revanced-patches/commit/d23c31a9ec39189e08474044ac5ca06d974add76))\n* **youtube/return-youtube-dislike:** support for shorts ([#1596](https://github.com/revanced/revanced-patches/issues/1596)) ([967c1cb](https://github.com/revanced/revanced-patches/commit/967c1cbd4b340a382a355f13d236d2881bafddbf))\n* **youtube:** remove patch `open-links-directly` ([79291a0](https://github.com/revanced/revanced-patches/commit/79291a0d34bd9514cbef5d97c21c59dfbffad287))\n\n  \n\nYouTube version: 17.49.37,\n\nUse [MicroG APK](https://github.com/inotia00/VancedMicroG/releases/latest/download/microg.apk) for YouTube and Music\n\n[Revanced-tool repo](https://github.com/Kingsmanvn-Official/ReVanced-tool)"
+  "tarball_url": "https://api.github.com/repos/Kingsmanvn-Official/ReVanced-tool/tarball/2023.03.13-05.13.44",
+  "zipball_url": "https://api.github.com/repos/Kingsmanvn-Official/ReVanced-tool/zipball/2023.03.13-05.13.44",
+  "body": "2023-03-12\n  \nCLI: revanced-cli-2.20.0-all.jar  \nIntegrations: revanced-integrations-0.99.0.apk  \nPatches: revanced-patches-2.165.0.jar  \n\n### [2.165.0](https://github.com/revanced/revanced-patches/compare/v2.164.0...v2.165.0) (2023-03-12)\n### Features\n* **youtubevanced:** `general-ads` patch ([#1693](https://github.com/revanced/revanced-patches/issues/1693)) ([0274e24](https://github.com/revanced/revanced-patches/commit/0274e24a31bef0fc7e3cd8cbaf04211ddfbfb6d2))\n\n  \n\nYouTube version: 17.49.37,\n\nUse [MicroG APK](https://github.com/inotia00/VancedMicroG/releases/latest/download/microg.apk) for YouTube and Music\n\n[Revanced-tool repo](https://github.com/Kingsmanvn-Official/ReVanced-tool)"
 }
