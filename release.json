@@ -1,9 +1,9 @@
 {
-  "url": "https://api.github.com/repos/Kingsmanvn-Official/ReVanced-tool/releases/100362271",
-  "assets_url": "https://api.github.com/repos/Kingsmanvn-Official/ReVanced-tool/releases/100362271/assets",
-  "upload_url": "https://uploads.github.com/repos/Kingsmanvn-Official/ReVanced-tool/releases/100362271/assets{?name,label}",
-  "html_url": "https://github.com/Kingsmanvn-Official/ReVanced-tool/releases/tag/2023.04.21-23.18.36",
-  "id": 100362271,
+  "url": "https://api.github.com/repos/Kingsmanvn-Official/ReVanced-tool/releases/100686188",
+  "assets_url": "https://api.github.com/repos/Kingsmanvn-Official/ReVanced-tool/releases/100686188/assets",
+  "upload_url": "https://uploads.github.com/repos/Kingsmanvn-Official/ReVanced-tool/releases/100686188/assets{?name,label}",
+  "html_url": "https://github.com/Kingsmanvn-Official/ReVanced-tool/releases/tag/2023.04.24-23.18.42",
+  "id": 100686188,
   "author": {
     "login": "github-actions[bot]",
     "id": 41898282,
@@ -24,19 +24,19 @@
     "type": "Bot",
     "site_admin": false
   },
-  "node_id": "RE_kwDOICdUDM4F-2gf",
-  "tag_name": "2023.04.21-23.18.36",
+  "node_id": "RE_kwDOICdUDM4GAFls",
+  "tag_name": "2023.04.24-23.18.42",
   "target_commitish": "main",
   "name": "Revanced-v17.49.37,",
   "draft": false,
   "prerelease": false,
   "created_at": "2023-01-30T10:03:15Z",
-  "published_at": "2023-04-21T16:21:38Z",
+  "published_at": "2023-04-24T16:21:35Z",
   "assets": [
     {
-      "url": "https://api.github.com/repos/Kingsmanvn-Official/ReVanced-tool/releases/assets/104707782",
-      "id": 104707782,
-      "node_id": "RA_kwDOICdUDM4GPbbG",
+      "url": "https://api.github.com/repos/Kingsmanvn-Official/ReVanced-tool/releases/assets/105081639",
+      "id": 105081639,
+      "node_id": "RA_kwDOICdUDM4GQ2sn",
       "name": "YT-Magisk-17.49.37.-arm64.Amoled.Zip",
       "label": "",
       "uploader": {
@@ -61,16 +61,16 @@
       },
       "content_type": "binary/octet-stream",
       "state": "uploaded",
-      "size": 65181599,
+      "size": 65220462,
       "download_count": 0,
-      "created_at": "2023-04-21T16:22:20Z",
-      "updated_at": "2023-04-21T16:22:22Z",
-      "browser_download_url": "https://github.com/Kingsmanvn-Official/ReVanced-tool/releases/download/2023.04.21-23.18.36/YT-Magisk-17.49.37.-arm64.Amoled.Zip"
+      "created_at": "2023-04-24T16:23:06Z",
+      "updated_at": "2023-04-24T16:23:09Z",
+      "browser_download_url": "https://github.com/Kingsmanvn-Official/ReVanced-tool/releases/download/2023.04.24-23.18.42/YT-Magisk-17.49.37.-arm64.Amoled.Zip"
     },
     {
-      "url": "https://api.github.com/repos/Kingsmanvn-Official/ReVanced-tool/releases/assets/104707898",
-      "id": 104707898,
-      "node_id": "RA_kwDOICdUDM4GPbc6",
+      "url": "https://api.github.com/repos/Kingsmanvn-Official/ReVanced-tool/releases/assets/105081466",
+      "id": 105081466,
+      "node_id": "RA_kwDOICdUDM4GQ2p6",
       "name": "YT-Magisk-17.49.37.-arm64.Zip",
       "label": "",
       "uploader": {
@@ -95,16 +95,16 @@
       },
       "content_type": "binary/octet-stream",
       "state": "uploaded",
-      "size": 65252390,
+      "size": 65208313,
       "download_count": 0,
-      "created_at": "2023-04-21T16:23:07Z",
-      "updated_at": "2023-04-21T16:23:09Z",
-      "browser_download_url": "https://github.com/Kingsmanvn-Official/ReVanced-tool/releases/download/2023.04.21-23.18.36/YT-Magisk-17.49.37.-arm64.Zip"
+      "created_at": "2023-04-24T16:22:22Z",
+      "updated_at": "2023-04-24T16:22:23Z",
+      "browser_download_url": "https://github.com/Kingsmanvn-Official/ReVanced-tool/releases/download/2023.04.24-23.18.42/YT-Magisk-17.49.37.-arm64.Zip"
     },
     {
-      "url": "https://api.github.com/repos/Kingsmanvn-Official/ReVanced-tool/releases/assets/104707669",
-      "id": 104707669,
-      "node_id": "RA_kwDOICdUDM4GPbZV",
+      "url": "https://api.github.com/repos/Kingsmanvn-Official/ReVanced-tool/releases/assets/105081387",
+      "id": 105081387,
+      "node_id": "RA_kwDOICdUDM4GQ2or",
       "name": "YT-NoRoot-17.49.37.-arm64.Amoled.apk",
       "label": "",
       "uploader": {
@@ -129,16 +129,16 @@
       },
       "content_type": "application/vnd.android.package-archive",
       "state": "uploaded",
-      "size": 83117546,
+      "size": 83125738,
       "download_count": 0,
-      "created_at": "2023-04-21T16:21:39Z",
-      "updated_at": "2023-04-21T16:21:41Z",
-      "browser_download_url": "https://github.com/Kingsmanvn-Official/ReVanced-tool/releases/download/2023.04.21-23.18.36/YT-NoRoot-17.49.37.-arm64.Amoled.apk"
+      "created_at": "2023-04-24T16:22:01Z",
+      "updated_at": "2023-04-24T16:22:04Z",
+      "browser_download_url": "https://github.com/Kingsmanvn-Official/ReVanced-tool/releases/download/2023.04.24-23.18.42/YT-NoRoot-17.49.37.-arm64.Amoled.apk"
     },
     {
-      "url": "https://api.github.com/repos/Kingsmanvn-Official/ReVanced-tool/releases/assets/104707689",
-      "id": 104707689,
-      "node_id": "RA_kwDOICdUDM4GPbZp",
+      "url": "https://api.github.com/repos/Kingsmanvn-Official/ReVanced-tool/releases/assets/105081350",
+      "id": 105081350,
+      "node_id": "RA_kwDOICdUDM4GQ2oG",
       "name": "YT-NoRoot-17.49.37.-arm64.apk",
       "label": "",
       "uploader": {
@@ -163,14 +163,14 @@
       },
       "content_type": "application/vnd.android.package-archive",
       "state": "uploaded",
-      "size": 83097066,
+      "size": 83035626,
       "download_count": 0,
-      "created_at": "2023-04-21T16:21:48Z",
-      "updated_at": "2023-04-21T16:21:50Z",
-      "browser_download_url": "https://github.com/Kingsmanvn-Official/ReVanced-tool/releases/download/2023.04.21-23.18.36/YT-NoRoot-17.49.37.-arm64.apk"
+      "created_at": "2023-04-24T16:21:35Z",
+      "updated_at": "2023-04-24T16:21:38Z",
+      "browser_download_url": "https://github.com/Kingsmanvn-Official/ReVanced-tool/releases/download/2023.04.24-23.18.42/YT-NoRoot-17.49.37.-arm64.apk"
     }
   ],
-  "tarball_url": "https://api.github.com/repos/Kingsmanvn-Official/ReVanced-tool/tarball/2023.04.21-23.18.36",
-  "zipball_url": "https://api.github.com/repos/Kingsmanvn-Official/ReVanced-tool/zipball/2023.04.21-23.18.36",
-  "body": "2023-04-21\n  \nCLI: revanced-cli-2.20.1-all.jar  \nIntegrations: revanced-integrations-0.103.0.apk  \nPatches: revanced-patches-2.169.0.jar  \n\n### [2.169.0](https://github.com/revanced/revanced-patches/compare/v2.168.0...v2.169.0) (2023-04-21)\n### Bug Fixes\n* add missing annotation to patches ([#1882](https://github.com/revanced/revanced-patches/issues/1882)) ([d86b6a4](https://github.com/revanced/revanced-patches/commit/d86b6a4a659172c3f1db8eb883f28dfee4e83e4c))\n* **youtube/hide-video-action-buttons:** change 'Hide create, clip and thanks buttons' to default off ([#1923](https://github.com/revanced/revanced-patches/issues/1923)) ([fc89c86](https://github.com/revanced/revanced-patches/commit/fc89c865f94fffd748809eaf0504cc91f6389500))\n* **youtube/hide-video-action-buttons:** fix 'hide share button' ([#1924](https://github.com/revanced/revanced-patches/issues/1924)) ([bc05e44](https://github.com/revanced/revanced-patches/commit/bc05e4494d914f944a831bfb83a150ad93bb342f))\n* **youtube/microg-support:** remove incorrect patch dependency ([3e0c45c](https://github.com/revanced/revanced-patches/commit/3e0c45c2dff9f6336e42fdd3d1b5b5de5af1b1cb))\n* **youtube/microg-support:** rename patch correctly ([091a25d](https://github.com/revanced/revanced-patches/commit/091a25d46145b1c27791245fca0933e9c8a68e9a))\n* **youtube/return-youtube-dislike:** render dislikes when scrolling into the screen ([#1873](https://github.com/revanced/revanced-patches/issues/1873)) ([85675b8](https://github.com/revanced/revanced-patches/commit/85675b800070de9752b2a4bfea3182381d4cfba4))\n* **youtube/sponsorblock:** do not depend on `remember-playback-speed` patch ([b0834fa](https://github.com/revanced/revanced-patches/commit/b0834faa69755a94f70ae5075a10cf15e8a6b857))\n* **youtube/sponsorblock:** fix autorepeat button layout ([#1868](https://github.com/revanced/revanced-patches/issues/1868)) ([5e148d9](https://github.com/revanced/revanced-patches/commit/5e148d9384e8f9f1bc8f5daa7e68a05574810329))\n* **youtube/spoof-signature-verification:** depend on `client-spoof` patch ([0d47375](https://github.com/revanced/revanced-patches/commit/0d47375092639e3e5dad8d67991004fc2f103606))\n* **youtubevanced/hide-ads:** hide more types of ads ([#1781](https://github.com/revanced/revanced-patches/issues/1781)) ([47ff447](https://github.com/revanced/revanced-patches/commit/47ff447f8ec0e5bbc174f34bd7d61b3031276641))\n* **youtubevanced/hide-ads:** remove broken ad filter ([#1881](https://github.com/revanced/revanced-patches/issues/1881)) ([5b987e1](https://github.com/revanced/revanced-patches/commit/5b987e14e81a47691883a5b5196c7ffee03941d0))\n### Features\n* `change-package-name` patch ([#1864](https://github.com/revanced/revanced-patches/issues/1864)) ([f9a6672](https://github.com/revanced/revanced-patches/commit/f9a6672122eb28fe06c9f5e137906ad868a491d6))\n* `enable-android-debugging` patch ([#1876](https://github.com/revanced/revanced-patches/issues/1876)) ([bd224d9](https://github.com/revanced/revanced-patches/commit/bd224d90deb838ee3e7bd0c16860023ebf113e96))\n* **facebook:** `hide-inbox-ads` patch ([#1893](https://github.com/revanced/revanced-patches/issues/1893)) ([2cfc982](https://github.com/revanced/revanced-patches/commit/2cfc9829e119884ca566d6ad90fd0542317891d7))\n* **id-austria:** bump compatibility to `2.6.0` ([#1827](https://github.com/revanced/revanced-patches/issues/1827)) ([f48e794](https://github.com/revanced/revanced-patches/commit/f48e794eebf9ea44008c4c8a3967ad039d19180a))\n* **inshorts:** `hide-ads` patch ([#1828](https://github.com/revanced/revanced-patches/issues/1828)) ([04a2acc](https://github.com/revanced/revanced-patches/commit/04a2accfe9f9254af9074ad0a309d485cedb01cb))\n* **memegenerator:** `unlock-pro` patch ([#1902](https://github.com/revanced/revanced-patches/issues/1902)) ([7d30541](https://github.com/revanced/revanced-patches/commit/7d3054178187bed294d156d3858613fa63a626ef))\n* **photomath/unlock-plus:** bump compatibility to `8.21.1` ([#1926](https://github.com/revanced/revanced-patches/issues/1926)) ([beb8d9c](https://github.com/revanced/revanced-patches/commit/beb8d9cbf254b4a2b2207a307934be65507dcf80))\n* **photomath:** bump compatibility up to `8.21.0` ([#1886](https://github.com/revanced/revanced-patches/issues/1886)) ([43464fd](https://github.com/revanced/revanced-patches/commit/43464fd6ffe6f097c574156146aeb23f8f026840))\n* **reddit:** bump compatibility to `2023.12.0` ([#1825](https://github.com/revanced/revanced-patches/issues/1825)) ([e3666e6](https://github.com/revanced/revanced-patches/commit/e3666e68ed4816c85fbb110cb098f53fddf135f1))\n* use better patch description ([32fcd25](https://github.com/revanced/revanced-patches/commit/32fcd258c6b00315265c09380550a2e98b5ec9e7))\n* **youtube-music:** `bypass-certificate-checks` patch ([#1810](https://github.com/revanced/revanced-patches/issues/1810)) ([ef8f26f](https://github.com/revanced/revanced-patches/commit/ef8f26fb976c3044039f9bff0496088763ab66cd))\n* **youtube/settings:** disable preferences and add dialog messages to preferences ([#1801](https://github.com/revanced/revanced-patches/issues/1801)) ([05023ba](https://github.com/revanced/revanced-patches/commit/05023bab1d94e04553ac274468bdba7a19ad9180))\n* **youtube/sponsorblock:** skip to video highlight ([#1874](https://github.com/revanced/revanced-patches/issues/1874)) ([83747b7](https://github.com/revanced/revanced-patches/commit/83747b7aea33d8fe4b4b9514fdf7c9081c357410))\n* **youtube:** bump compatibility to `18.08.37` ([29561ec](https://github.com/revanced/revanced-patches/commit/29561eca10e18e11f2d4a7f9bab2f12303490b6f))\n* **youtube:** change default video speed and quality inside the settings menu ([#1880](https://github.com/revanced/revanced-patches/issues/1880)) ([fbb1763](https://github.com/revanced/revanced-patches/commit/fbb17636d8ab9f2a43ead896451804b04464527c))\n* **youtube:** constrain compatibility to `18.08.37` ([7403fc8](https://github.com/revanced/revanced-patches/commit/7403fc86ae7b7d756a2939fa0a507f237aaf6edf))\n* **youtube:** sponsorblock improvements ([#1557](https://github.com/revanced/revanced-patches/issues/1557)) ([b5d712a](https://github.com/revanced/revanced-patches/commit/b5d712a3326d1e8cdb8d8642aa7bd1bee6e30ac1))\n* **youtube:** support version `18.08.37` ([4f4ceab](https://github.com/revanced/revanced-patches/commit/4f4ceab2cc32a38dd3967fd4e81f690330c08f5c))\n\n  \n\nYouTube version: 17.49.37,\n\nUse [MicroG APK](https://github.com/inotia00/VancedMicroG/releases/latest/download/microg.apk) for YouTube and Music\n\n[Revanced-tool repo](https://github.com/Kingsmanvn-Official/ReVanced-tool)"
+  "tarball_url": "https://api.github.com/repos/Kingsmanvn-Official/ReVanced-tool/tarball/2023.04.24-23.18.42",
+  "zipball_url": "https://api.github.com/repos/Kingsmanvn-Official/ReVanced-tool/zipball/2023.04.24-23.18.42",
+  "body": "2023-04-24\n  \nCLI: revanced-cli-2.20.1-all.jar  \nIntegrations: revanced-integrations-0.104.0.apk  \nPatches: revanced-patches-2.170.0.jar  \n\n### [2.170.0](https://github.com/revanced/revanced-patches/compare/v2.169.0...v2.170.0) (2023-04-24)\n### Bug Fixes\n* **enable-android-debugging:** don't include by default ([b2856f7](https://github.com/revanced/revanced-patches/commit/b2856f7f71640f78dfc11b3dff90a58add48d605))\n* **twitch/block-embedded-ads:** correct spelling mistake ([#1962](https://github.com/revanced/revanced-patches/issues/1962)) ([6138c2a](https://github.com/revanced/revanced-patches/commit/6138c2ac24f586137bc4ef974a6600d24ebdda3e))\n* **youtube/hide-video-action-buttons:** fix hide action buttons not working for some users ([#1959](https://github.com/revanced/revanced-patches/issues/1959)) ([3ab5842](https://github.com/revanced/revanced-patches/commit/3ab5842ebbee3381604efcaa454ea5c49d3a5363))\n* **youtube/sponsorblock:** correct spelling mistake ([#1941](https://github.com/revanced/revanced-patches/issues/1941)) ([d9d0fe7](https://github.com/revanced/revanced-patches/commit/d9d0fe7e236ccce348e8b3214454d29656a853c0))\n* **youtube/sponsorblock:** use lowercase letters for URL string ([#1942](https://github.com/revanced/revanced-patches/issues/1942)) ([b58842a](https://github.com/revanced/revanced-patches/commit/b58842a5f6f3fbcf06e87821bbc1ad3be7ca2fc0))\n* **youtube/tablet-mini-player:** throw if fingerprint fails to resolve ([642eef3](https://github.com/revanced/revanced-patches/commit/642eef39e8e8eeb1f95980f95b83e79faffe3a18))\n### Features\n* **youtube/wide-searchbar:** rename patch ([bb5885e](https://github.com/revanced/revanced-patches/commit/bb5885eca4b750f15776de9099fb4dd83f6d70f5))\n* **youtube:** bump compatibility to `18.15.40` ([ad82fcd](https://github.com/revanced/revanced-patches/commit/ad82fcdb63c7cc77e7387b7f0da95b005c90ce31))\n* **youtube:** constrain patches to `18.15.40` ([c0c10de](https://github.com/revanced/revanced-patches/commit/c0c10dec3446d35e20b17c25510cddcbe07b494f))\n* **youtube:** remove non working patch `hide-my-mix` ([6ae0f0b](https://github.com/revanced/revanced-patches/commit/6ae0f0b466322c4d60feb20ed0e809783452b9d4))\n* **youtube:** support version `18.15.40` ([c3614ab](https://github.com/revanced/revanced-patches/commit/c3614ab1d10a70fdb0813d7249866d696b28088f))\n\n  \n\nYouTube version: 17.49.37,\n\nUse [MicroG APK](https://github.com/inotia00/VancedMicroG/releases/latest/download/microg.apk) for YouTube and Music\n\n[Revanced-tool repo](https://github.com/Kingsmanvn-Official/ReVanced-tool)"
 }
